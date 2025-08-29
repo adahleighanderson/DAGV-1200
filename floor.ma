@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: floor.ma
-//Last modified: Thu, Aug 28, 2025 07:48:29 PM
+//Last modified: Thu, Aug 28, 2025 08:53:36 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,24 +11,24 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "F225200D-40ED-27DF-2A37-67A4A93B6521";
+fileInfo "UUID" "EC0BD57C-4C35-E281-2F4E-91BA8DED8AB2";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "27831001-4F35-E3F4-ACFB-C4A657545372";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 22.588305019105931 26.313682427333713 19.693264063821662 ;
-	setAttr ".r" -type "double3" -35.264389682754704 45 -2.2489917831974728e-14 ;
-	setAttr ".rp" -type "double3" 0 -1.7763568394002505e-15 -7.1054273576010019e-15 ;
-	setAttr ".rpt" -type "double3" 8.3170635160004796e-15 -8.3008706858010411e-15 8.1416460564676489e-15 ;
+	setAttr ".t" -type "double3" 26.232644772539818 30.280063285227055 23.5014954165045 ;
+	setAttr ".r" -type "double3" -35.264389682754668 44.999999999999993 -3.3734876747962069e-14 ;
+	setAttr ".rp" -type "double3" 0 -8.8817841970012523e-16 1.1102230246251565e-16 ;
+	setAttr ".rpt" -type "double3" 1.1758496451404514e-14 -5.7270368759379783e-15 3.8717359578307879e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2A40FD89-4699-DCC0-8A25-F9A7F54B1752";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 40.050102637835359;
+	setAttr ".coi" 48.009157946282279;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.2500001192092931 5.7264390123914986 -6.2500000000000071 ;
+	setAttr ".tp" -type "double3" -1.4854554913135956 2.5619630213735967 -4.2166048473489273 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "72B48817-4305-0680-7951-CFADFE0B4F43";
@@ -3403,7 +3403,7 @@ createNode mesh -n "pCubeShape8" -p "pCube8";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pTorus1" -p "nightstand";
 	rename -uid "5F891A97-46AB-DB47-DF3C-D098854C8855";
-	setAttr ".t" -type "double3" 1.1291599615905197 2.8849346191896919 0 ;
+	setAttr ".t" -type "double3" 1.0205146470823916 2.8849346191896919 0 ;
 	setAttr ".s" -type "double3" 0.13430522566965142 0.24702246593424473 0.27128868464143535 ;
 createNode mesh -n "pTorusShape1" -p "pTorus1";
 	rename -uid "AC2CF1B8-4B05-4639-7B6F-F8A28BF62DE4";
