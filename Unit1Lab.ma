@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Unit1Lab.ma
-//Last modified: Mon, Sep 29, 2025 02:23:03 PM
+//Last modified: Mon, Sep 29, 2025 02:55:56 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -12,24 +12,24 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "88B9C6C5-4758-ADCF-A112-43AF45B777A0";
+fileInfo "UUID" "339D7732-4DBD-EF5C-6415-BF9F9DA4DC1A";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "27831001-4F35-E3F4-ACFB-C4A657545372";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 19.020833581686013 24.997272713286815 19.020833700895299 ;
-	setAttr ".r" -type "double3" -35.26438968275469 45 -2.0240926048777256e-14 ;
-	setAttr ".rp" -type "double3" 2.6645352591003757e-15 -3.5527136788005009e-15 -7.1054273576010019e-15 ;
-	setAttr ".rpt" -type "double3" 6.9210045429649489e-15 -6.9923056834374206e-15 3.0012630263237102e-15 ;
+	setAttr ".t" -type "double3" 11.684880738593579 24.77232284560418 -10.627450723492029 ;
+	setAttr ".r" -type "double3" 127.69295635443018 47.713341670476865 -180 ;
+	setAttr ".rp" -type "double3" -4.4408920985006262e-16 8.8817841970012523e-16 3.5527136788005009e-15 ;
+	setAttr ".rpt" -type "double3" 7.1736731034329309e-16 1.0617160143748433e-14 4.1708029327011498e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2A40FD89-4699-DCC0-8A25-F9A7F54B1752";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 33.378063074161254;
+	setAttr ".coi" 25.832744410978218;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.250000119209286 5.7264390123914914 -0.25000000000000355 ;
+	setAttr ".tp" -type "double3" 3.5527136788005009e-15 4.3309056479751646 -1.6875389974302379e-13 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "72B48817-4305-0680-7951-CFADFE0B4F43";
@@ -53,38 +53,37 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "A1222D93-4825-81C2-334D-74B9688AEB95";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.0680455241948388 1004.2848052549036 -4.9896339518752182 ;
-	setAttr ".r" -type "double3" -90 0 0 ;
-	setAttr ".rpt" -type "double3" -2.7534252405823029e-14 -2.5234992626341038e-15 3.3969994568028433e-14 ;
+	setAttr ".t" -type "double3" -0.25000011920948406 5.726439012391535 999.84999999999957 ;
+	setAttr ".rpt" -type "double3" -2.7534252405823029e-14 -3.2675604408611592e-14 6.8254304985963388e-14 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "E1199355-4BDC-7EA0-6200-BDACB1843EAB";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1;
-	setAttr ".ow" 6.4202268181612405;
+	setAttr ".coi" 1000.0999999999997;
+	setAttr ".ow" 32.475953261346092;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" -1.0680455241948663 4.1848052549036083 -4.9896339518751844 ;
+	setAttr ".tp" -type "double3" -0.2500001192095116 5.7264390123915021 -0.25 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "16EF009C-423F-BCF6-60B1-0897828405A0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 9.6356544506071717 1.1102230246247615e-15 ;
-	setAttr ".r" -type "double3" 0 90 0 ;
-	setAttr ".rpt" -type "double3" -2.0597583974055133e-14 -5.6832824896386361e-15 7.9023524882932654e-28 ;
+	setAttr ".t" -type "double3" -0.25000011920946807 1006.045460290421 2.6671494958663562 ;
+	setAttr ".r" -type "double3" -90.000000000000014 90 0 ;
+	setAttr ".rpt" -type "double3" -4.3620283116099828e-14 3.8556605763343881e-15 7.5730646901217133e-28 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "CAD07A69-4252-21EE-9CC1-3C968F70980F";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 17.578763753049646;
+	setAttr ".ow" 21.411272907380138;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
-	setAttr ".tp" -type "double3" 0 9.6356544506071664 1.1102230246255518e-15 ;
+	setAttr ".tp" -type "double3" -0.25000011920928966 5.9454602904210105 2.6671494958663562 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -25237,35 +25236,32 @@ createNode mesh -n "polySurfaceShape2" -p "polySurface1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "curve1";
-	rename -uid "25E69AE3-4D5E-AF66-C6E4-60807765D2AF";
-createNode nurbsCurve -n "curveShape1" -p "curve1";
-	rename -uid "67712D1B-40E0-FA9C-927C-E08DFAD4C125";
+createNode transform -n "curve2";
+	rename -uid "B0BB225A-4AFC-0BEA-183F-E489ACA9FF4B";
+createNode nurbsCurve -n "curveShape2" -p "curve2";
+	rename -uid "3807D80D-49B1-14BC-22CC-C7BFFC2538F6";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
-		3 11 0 no 3
-		16 0 0 0 1 2 3 4 5 6 7 8 9 10 11 11 11
-		14
-		0 10.223008483991249 -0.060584069877717098
-		0 10.233122645083078 -0.2527782042000209
-		0 10.253350967266668 -0.63716647284462524
-		0 9.7063357401993731 0.071580083194748415
-		0 9.9863658144093694 -2.3844751433407692
-		0 9.017957933947665 -3.052745357815414
-		0 9.1526597880459821 -2.6672430016610646
-		0 9.3846088467701687 -2.7503765904240498
-		0 9.5080191898448554 -2.1115646728188722
-		0 9.5730343802015376 -1.6189076743015749
-		0 9.584866086389674 -0.47297088442094981
-		0 9.571349773953596 -0.11396139547335821
-		0 9.5995054696577 -0.056415244482371202
-		0 9.6135833175097645 -0.027642168986877828
+		3 5 0 no 3
+		10 0 0 0 1 2 3 4 5 5 5
+		8
+		-0.033321357711458575 6.9064925722526684 0
+		0.25719013837180871 6.9554696835363021 0
+		1.1237880663374691 6.9424833707217397 0
+		0.46772701177416098 6.111618968253989 0
+		1.7958250991091105 6.1331551832696034 0
+		2.8419225072271863 5.9606642926146423 0
+		4.9562054422115391 5.5925762451208056 0
+		4.8747069699715713 4.6578250834556778 0
 		;
-createNode transform -n "revolvedSurface1";
-	rename -uid "4F160E5D-4367-C5F7-3893-AEA7FB1D6297";
-	setAttr ".t" -type "double3" -1.7760443467187592 1.9111306011838991 -1.6293412555315889 ;
+createNode transform -n "group1";
+	rename -uid "887E1C17-4FB7-D259-FBD9-B486F0D039CC";
+	setAttr ".t" -type "double3" -0.28517269130443146 8.8595783105269099 -0.28495836259203244 ;
+	setAttr ".s" -type "double3" 0.45960798388800267 0.45960798388800267 0.45960798388800267 ;
+createNode transform -n "revolvedSurface1" -p "group1";
+	rename -uid "4BF8872E-41D4-A9EE-8CF6-07A3F512C1BC";
 createNode nurbsSurface -n "revolvedSurfaceShape1" -p "revolvedSurface1";
-	rename -uid "C6859682-47A7-28AA-18E2-9FB944589428";
+	rename -uid "9ADC7DFF-4BF6-F828-80FB-1F9382C70EF7";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -25276,6 +25272,77 @@ createNode nurbsSurface -n "revolvedSurfaceShape1" -p "revolvedSurface1";
 	setAttr ".dvv" 0;
 	setAttr ".cpr" 4;
 	setAttr ".cps" 4;
+createNode transform -n "pCylinder2" -p "group1";
+	rename -uid "EB94F9E1-4053-6ADB-3861-C7A761577DCB";
+	setAttr ".t" -type "double3" 0 7.6465315199051211 0 ;
+	setAttr ".s" -type "double3" 0.481701176103358 1 0.481701176103358 ;
+createNode mesh -n "pCylinderShape2" -p "pCylinder2";
+	rename -uid "83BE4F6D-4A38-FE76-0107-9AA2CDD3119B";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.59374979138374329 0.48306670784950256 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 46 ".pt";
+	setAttr ".pt[20]" -type "float3" 0.10343689 -0.41733974 -0.033603221 ;
+	setAttr ".pt[21]" -type "float3" 0.08798945 -0.41733974 -0.063919216 ;
+	setAttr ".pt[22]" -type "float3" 0.063923746 -0.41733861 -0.087986022 ;
+	setAttr ".pt[23]" -type "float3" 0.033607274 -0.41733569 -0.10343176 ;
+	setAttr ".pt[24]" -type "float3" 2.1955701e-08 -0.41733378 -0.10875458 ;
+	setAttr ".pt[25]" -type "float3" -0.033603787 -0.41732901 -0.10343182 ;
+	setAttr ".pt[26]" -type "float3" -0.063920617 -0.41732752 -0.087986499 ;
+	setAttr ".pt[27]" -type "float3" -0.087972283 -0.41732407 -0.063919216 ;
+	setAttr ".pt[28]" -type "float3" -0.10341936 -0.41732192 -0.033603281 ;
+	setAttr ".pt[29]" -type "float3" -0.10874227 -0.4173215 -5.5940734e-07 ;
+	setAttr ".pt[30]" -type "float3" -0.10341936 -0.41732085 0.033601165 ;
+	setAttr ".pt[31]" -type "float3" -0.087972224 -0.41732085 0.063926101 ;
+	setAttr ".pt[32]" -type "float3" -0.063920617 -0.4173215 0.08797732 ;
+	setAttr ".pt[33]" -type "float3" -0.033603847 -0.41732192 0.10342473 ;
+	setAttr ".pt[34]" -type "float3" 2.0202073e-08 -0.41732633 0.10874644 ;
+	setAttr ".pt[35]" -type "float3" 0.033607394 -0.41732818 0.10342479 ;
+	setAttr ".pt[36]" -type "float3" 0.063923746 -0.41733098 0.08797726 ;
+	setAttr ".pt[37]" -type "float3" 0.087989926 -0.41733491 0.063926101 ;
+	setAttr ".pt[38]" -type "float3" 0.10343713 -0.41733569 0.033601224 ;
+	setAttr ".pt[39]" -type "float3" 0.10876051 -0.41733861 -5.5945213e-07 ;
+	setAttr ".pt[41]" -type "float3" -4.3625432e-06 0.46565807 1.601482e-06 ;
+	setAttr ".pt[102]" -type "float3" -0.2249485 0.018113017 0.073091678 ;
+	setAttr ".pt[103]" -type "float3" -0.23652485 0.018113017 -3.657528e-08 ;
+	setAttr ".pt[104]" -type "float3" -0.2249482 0.018113017 -0.073092088 ;
+	setAttr ".pt[105]" -type "float3" -0.19135219 0.018113017 -0.13902606 ;
+	setAttr ".pt[106]" -type "float3" -0.13902655 0.018113017 -0.19135559 ;
+	setAttr ".pt[107]" -type "float3" -0.073090456 0.018113017 -0.2249516 ;
+	setAttr ".pt[108]" -type "float3" -1.9162858e-09 0.018113017 -0.23652866 ;
+	setAttr ".pt[109]" -type "float3" 0.073091455 0.018113017 -0.2249516 ;
+	setAttr ".pt[110]" -type "float3" 0.1390277 0.018113017 -0.19135559 ;
+	setAttr ".pt[111]" -type "float3" 0.19135702 0.018113017 -0.13902606 ;
+	setAttr ".pt[112]" -type "float3" 0.22495309 0.018113017 -0.073092148 ;
+	setAttr ".pt[113]" -type "float3" 0.23652962 0.018113017 -3.657528e-08 ;
+	setAttr ".pt[114]" -type "float3" 0.22495309 0.018113017 0.073091619 ;
+	setAttr ".pt[115]" -type "float3" 0.19135696 0.018113017 0.13902768 ;
+	setAttr ".pt[116]" -type "float3" 0.1390277 0.018113017 0.19135308 ;
+	setAttr ".pt[117]" -type "float3" 0.073091514 0.018113017 0.22494969 ;
+	setAttr ".pt[118]" -type "float3" -8.9653573e-09 0.018113017 0.23652628 ;
+	setAttr ".pt[119]" -type "float3" -0.073090576 0.018113017 0.22494975 ;
+	setAttr ".pt[120]" -type "float3" -0.13902655 0.018113017 0.19135356 ;
+	setAttr ".pt[121]" -type "float3" -0.19135267 0.018113017 0.13902768 ;
+createNode transform -n "pCylinder3" -p "group1";
+	rename -uid "B7DC7DEE-4006-5D3B-6E3F-2F983350A184";
+	setAttr ".t" -type "double3" 0 11.360292279380499 0 ;
+	setAttr ".s" -type "double3" 0.095746957144835679 2.8279679959883519 0.095746957144835679 ;
+createNode mesh -n "pCylinderShape3" -p "pCylinder3";
+	rename -uid "57075868-4AD6-B528-9A95-148F7F9789F4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "F7A9676F-4A84-075E-58EE-6E98A85FB6D8";
 	setAttr -s 4 ".lnk";
@@ -25638,10 +25705,155 @@ createNode polyBevel3 -n "polyBevel8";
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
 createNode revolve -n "revolve1";
-	rename -uid "AB72734A-4E65-487A-012E-6B91B53E89F5";
+	rename -uid "87897E4B-461F-E4E7-FD7F-8E80DDA1FC71";
 	setAttr ".ax" -type "double3" 0 1 0 ;
 createNode reverseSurface -n "reverseSurface1";
-	rename -uid "F808127D-4DDD-CDCE-3BA5-1AB0EB6CD0E8";
+	rename -uid "C7E8CE5D-480C-98A8-E1DE-63A6F3336EAE";
+createNode polyCylinder -n "polyCylinder3";
+	rename -uid "F15769BD-4B7F-61BB-71F2-6882F179C24E";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polySplit -n "polySplit24";
+	rename -uid "72F0D282-4C1B-C142-598B-AD9523C8F397";
+	setAttr -s 21 ".e[0:20]"  0.64349699 0.64349699 0.64349699 0.64349699
+		 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699
+		 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699 0.64349699
+		 0.64349699;
+	setAttr -s 21 ".d[0:20]"  -2147483608 -2147483589 -2147483590 -2147483591 -2147483592 -2147483593 
+		-2147483594 -2147483595 -2147483596 -2147483597 -2147483598 -2147483599 -2147483600 -2147483601 -2147483602 -2147483603 -2147483604 -2147483605 
+		-2147483606 -2147483607 -2147483608;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit25";
+	rename -uid "23F2480E-4FB4-DC75-54DA-7B9B9FE9DBED";
+	setAttr -s 21 ".e[0:20]"  0.413665 0.413665 0.413665 0.413665 0.413665
+		 0.413665 0.413665 0.413665 0.413665 0.413665 0.413665 0.413665 0.413665 0.413665
+		 0.413665 0.413665 0.413665 0.413665 0.413665 0.413665 0.413665;
+	setAttr -s 21 ".d[0:20]"  -2147483608 -2147483589 -2147483590 -2147483591 -2147483592 -2147483593 
+		-2147483594 -2147483595 -2147483596 -2147483597 -2147483598 -2147483599 -2147483600 -2147483601 -2147483602 -2147483603 -2147483604 -2147483605 
+		-2147483606 -2147483607 -2147483608;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit26";
+	rename -uid "462D55A7-4DD6-6F2D-9936-0AA5C46E850A";
+	setAttr -s 21 ".e[0:20]"  0.61337602 0.61337602 0.61337602 0.61337602
+		 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602
+		 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602 0.61337602
+		 0.61337602;
+	setAttr -s 21 ".d[0:20]"  -2147483608 -2147483589 -2147483590 -2147483591 -2147483592 -2147483593 
+		-2147483594 -2147483595 -2147483596 -2147483597 -2147483598 -2147483599 -2147483600 -2147483601 -2147483602 -2147483603 -2147483604 -2147483605 
+		-2147483606 -2147483607 -2147483608;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit27";
+	rename -uid "EFCAE469-4493-8AD6-A726-1B8BE36198F2";
+	setAttr -s 21 ".e[0:20]"  0.785133 0.785133 0.785133 0.785133 0.785133
+		 0.785133 0.785133 0.785133 0.785133 0.785133 0.785133 0.785133 0.785133 0.785133
+		 0.785133 0.785133 0.785133 0.785133 0.785133 0.785133 0.785133;
+	setAttr -s 21 ".d[0:20]"  -2147483548 -2147483547 -2147483546 -2147483545 -2147483544 -2147483543 
+		-2147483542 -2147483541 -2147483540 -2147483539 -2147483538 -2147483537 -2147483536 -2147483535 -2147483534 -2147483533 -2147483532 -2147483531 
+		-2147483530 -2147483529 -2147483548;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit28";
+	rename -uid "0E89E024-416A-B0C5-7EED-D59C425D31C3";
+	setAttr -s 21 ".e[0:20]"  0.78118002 0.78118002 0.78118002 0.78118002
+		 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002
+		 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002 0.78118002
+		 0.78118002;
+	setAttr -s 21 ".d[0:20]"  -2147483548 -2147483547 -2147483546 -2147483545 -2147483544 -2147483543 
+		-2147483542 -2147483541 -2147483540 -2147483539 -2147483538 -2147483537 -2147483536 -2147483535 -2147483534 -2147483533 -2147483532 -2147483531 
+		-2147483530 -2147483529 -2147483548;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak5";
+	rename -uid "029CCC2F-4603-3689-2924-18A915510D45";
+	setAttr ".uopa" yes;
+	setAttr -s 81 ".tk";
+	setAttr ".tk[20]" -type "float3" -0.60954654 -0.049094498 0.1980536 ;
+	setAttr ".tk[21]" -type "float3" -0.51851088 -0.049094498 0.37672061 ;
+	setAttr ".tk[22]" -type "float3" -0.37672067 -0.049094498 0.51851076 ;
+	setAttr ".tk[23]" -type "float3" -0.1980536 -0.049094498 0.60954642 ;
+	setAttr ".tk[24]" -type "float3" 4.2976684e-09 -0.049094498 0.64091468 ;
+	setAttr ".tk[25]" -type "float3" 0.1980536 -0.049094498 0.60954642 ;
+	setAttr ".tk[26]" -type "float3" 0.37672034 -0.049094498 0.51851106 ;
+	setAttr ".tk[27]" -type "float3" 0.51851106 -0.049094498 0.37672043 ;
+	setAttr ".tk[28]" -type "float3" 0.6095463 -0.049094498 0.19805354 ;
+	setAttr ".tk[29]" -type "float3" 0.64091456 -0.049094498 -5.9212297e-08 ;
+	setAttr ".tk[30]" -type "float3" 0.6095463 -0.049094498 -0.1980536 ;
+	setAttr ".tk[31]" -type "float3" 0.51851094 -0.049094498 -0.37672055 ;
+	setAttr ".tk[32]" -type "float3" 0.37672022 -0.049094498 -0.51851106 ;
+	setAttr ".tk[33]" -type "float3" 0.19805357 -0.049094498 -0.6095463 ;
+	setAttr ".tk[34]" -type "float3" 2.3398407e-08 -0.049094498 -0.64091456 ;
+	setAttr ".tk[35]" -type "float3" -0.19805354 -0.049094498 -0.6095463 ;
+	setAttr ".tk[36]" -type "float3" -0.37672031 -0.049094498 -0.51851094 ;
+	setAttr ".tk[37]" -type "float3" -0.51851082 -0.049094498 -0.37672049 ;
+	setAttr ".tk[38]" -type "float3" -0.60954618 -0.049094498 -0.1980536 ;
+	setAttr ".tk[39]" -type "float3" -0.64091432 -0.049094498 -5.9212297e-08 ;
+	setAttr ".tk[42]" -type "float3" 0.28478396 0.0053277016 -0.097066462 ;
+	setAttr ".tk[43]" -type "float3" 0.29943323 0.0013772845 -0.0048423242 ;
+	setAttr ".tk[44]" -type "float3" 0.28481501 -0.0026869774 0.087376833 ;
+	setAttr ".tk[45]" -type "float3" 0.24236006 -0.0064672232 0.170564 ;
+	setAttr ".tk[46]" -type "float3" 0.17622417 -0.009593457 0.2365762 ;
+	setAttr ".tk[47]" -type "float3" 0.092881203 -0.011759609 0.27895176 ;
+	setAttr ".tk[48]" -type "float3" 0.00048931857 -0.012753695 0.29354262 ;
+	setAttr ".tk[49]" -type "float3" -0.091907531 -0.012478352 0.27892053 ;
+	setAttr ".tk[50]" -type "float3" -0.17526484 -0.010960579 0.23651677 ;
+	setAttr ".tk[51]" -type "float3" -0.24142313 -0.0083489418 0.17048222 ;
+	setAttr ".tk[52]" -type "float3" -0.28390622 -0.0048990548 0.08728072 ;
+	setAttr ".tk[53]" -type "float3" -0.29855573 -0.00094863772 -0.0049433936 ;
+	setAttr ".tk[54]" -type "float3" -0.28393745 0.0031156242 -0.097162575 ;
+	setAttr ".tk[55]" -type "float3" -0.2414825 0.00689587 -0.18034977 ;
+	setAttr ".tk[56]" -type "float3" -0.17534667 0.010022104 -0.24636197 ;
+	setAttr ".tk[57]" -type "float3" -0.092003673 0.012188256 -0.28873754 ;
+	setAttr ".tk[58]" -type "float3" 0.00038825755 0.013182342 -0.30332839 ;
+	setAttr ".tk[59]" -type "float3" 0.09278512 0.012906998 -0.28870636 ;
+	setAttr ".tk[60]" -type "float3" 0.17614251 0.011389226 -0.24630266 ;
+	setAttr ".tk[61]" -type "float3" 0.24230087 0.0087775886 -0.18026805 ;
+	setAttr ".tk[62]" -type "float3" 0.28390634 0.0048990548 -0.087280691 ;
+	setAttr ".tk[63]" -type "float3" 0.29855561 0.00094863772 0.0049434565 ;
+	setAttr ".tk[64]" -type "float3" 0.28393739 -0.0031156242 0.097162604 ;
+	setAttr ".tk[65]" -type "float3" 0.24148244 -0.00689587 0.18034977 ;
+	setAttr ".tk[66]" -type "float3" 0.17534661 -0.010022104 0.24636197 ;
+	setAttr ".tk[67]" -type "float3" 0.092003614 -0.012188256 0.28873754 ;
+	setAttr ".tk[68]" -type "float3" -0.00038825755 -0.013182342 0.30332839 ;
+	setAttr ".tk[69]" -type "float3" -0.09278509 -0.012906998 0.2887063 ;
+	setAttr ".tk[70]" -type "float3" -0.17614245 -0.011389226 0.24630255 ;
+	setAttr ".tk[71]" -type "float3" -0.24230075 -0.0087775886 0.18026799 ;
+	setAttr ".tk[72]" -type "float3" -0.28478384 -0.0053277016 0.097066492 ;
+	setAttr ".tk[73]" -type "float3" -0.29943323 -0.0013772845 0.0048423866 ;
+	setAttr ".tk[74]" -type "float3" -0.28481507 0.0026869774 -0.087376773 ;
+	setAttr ".tk[75]" -type "float3" -0.24236012 0.0064672232 -0.17056394 ;
+	setAttr ".tk[76]" -type "float3" -0.17622423 0.009593457 -0.2365762 ;
+	setAttr ".tk[77]" -type "float3" -0.092881233 0.011759609 -0.27895176 ;
+	setAttr ".tk[78]" -type "float3" -0.00048931857 0.012753695 -0.29354262 ;
+	setAttr ".tk[79]" -type "float3" 0.091907561 0.012478352 -0.27892053 ;
+	setAttr ".tk[80]" -type "float3" 0.17526495 0.010960579 -0.23651689 ;
+	setAttr ".tk[81]" -type "float3" 0.24142325 0.0083489418 -0.17048222 ;
+	setAttr ".tk[102]" -type "float3" -0.60954654 0.049094558 0.1980536 ;
+	setAttr ".tk[103]" -type "float3" -0.64091432 0.049094558 -5.9212297e-08 ;
+	setAttr ".tk[104]" -type "float3" -0.60954618 0.049094558 -0.1980536 ;
+	setAttr ".tk[105]" -type "float3" -0.51851082 0.049094558 -0.37672049 ;
+	setAttr ".tk[106]" -type "float3" -0.37672031 0.049094558 -0.51851094 ;
+	setAttr ".tk[107]" -type "float3" -0.19805354 0.049094558 -0.6095463 ;
+	setAttr ".tk[108]" -type "float3" 2.3398407e-08 0.049094558 -0.64091456 ;
+	setAttr ".tk[109]" -type "float3" 0.19805357 0.049094558 -0.6095463 ;
+	setAttr ".tk[110]" -type "float3" 0.37672022 0.049094558 -0.51851094 ;
+	setAttr ".tk[111]" -type "float3" 0.51851094 0.049094558 -0.37672055 ;
+	setAttr ".tk[112]" -type "float3" 0.6095463 0.049094558 -0.1980536 ;
+	setAttr ".tk[113]" -type "float3" 0.64091456 0.049094558 -5.9212297e-08 ;
+	setAttr ".tk[114]" -type "float3" 0.6095463 0.049094558 0.19805354 ;
+	setAttr ".tk[115]" -type "float3" 0.51851106 0.049094558 0.37672043 ;
+	setAttr ".tk[116]" -type "float3" 0.37672034 0.049094558 0.51851106 ;
+	setAttr ".tk[117]" -type "float3" 0.1980536 0.049094558 0.60954642 ;
+	setAttr ".tk[118]" -type "float3" 4.297668e-09 0.049094558 0.64091468 ;
+	setAttr ".tk[119]" -type "float3" -0.1980536 0.049094558 0.60954642 ;
+	setAttr ".tk[120]" -type "float3" -0.37672067 0.049094558 0.51851076 ;
+	setAttr ".tk[121]" -type "float3" -0.51851088 0.049094558 0.37672061 ;
+createNode polyCylinder -n "polyCylinder4";
+	rename -uid "A03D6995-47AC-B7BE-FA5D-5E95DAE0328C";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -25664,7 +25876,7 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 16 ".dsm";
+	setAttr -s 18 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 8 ".gn";
 select -ne :initialParticleSE;
@@ -25687,6 +25899,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "groupId13.id" "pTorus1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pTorus1Shape.iog.og[0].gco";
 connectAttr "groupId6.id" "pTorus1Shape.ciog.cog[0].cgid";
@@ -25712,6 +25926,8 @@ connectAttr ":initialShadingGroup.mwc" "polySurfaceShape1.iog.og[1].gco";
 connectAttr "groupId131.id" "polySurfaceShape1.iog.og[2].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape1.iog.og[2].gco";
 connectAttr "reverseSurface1.os" "revolvedSurfaceShape1.cr";
+connectAttr "polySplit28.out" "pCylinderShape2.i";
+connectAttr "polyCylinder4.out" "pCylinderShape3.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -25765,8 +25981,14 @@ connectAttr "polyBevel6.out" "polyBevel7.ip";
 connectAttr "polySurfaceShape1.wm" "polyBevel7.mp";
 connectAttr "polyBevel7.out" "polyBevel8.ip";
 connectAttr "polySurfaceShape1.wm" "polyBevel8.mp";
-connectAttr "curveShape1.ws" "revolve1.ic";
+connectAttr "curveShape2.ws" "revolve1.ic";
 connectAttr "revolve1.os" "reverseSurface1.is";
+connectAttr "polyCylinder3.out" "polySplit24.ip";
+connectAttr "polySplit24.out" "polySplit25.ip";
+connectAttr "polySplit25.out" "polySplit26.ip";
+connectAttr "polySplit26.out" "polySplit27.ip";
+connectAttr "polyTweak5.out" "polySplit28.ip";
+connectAttr "polySplit27.out" "polyTweak5.ip";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "dirt.msg" ":defaultShaderList1.s" -na;
@@ -25788,6 +26010,8 @@ connectAttr "polySurfaceShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape1.iog.og[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape1.iog.og[2]" ":initialShadingGroup.dsm" -na;
 connectAttr "revolvedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId13.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId14.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId89.msg" ":initialShadingGroup.gn" -na;
