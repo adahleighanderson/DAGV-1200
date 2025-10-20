@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Unit1Lab.ma
-//Last modified: Mon, Oct 20, 2025 03:22:17 PM
+//Last modified: Mon, Oct 20, 2025 03:24:58 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "9F11E41C-40CA-A35F-2E1E-DEACE9F5F127";
+fileInfo "UUID" "EE427A05-4B6D-C2A1-3650-00B56E42B451";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "27831001-4F35-E3F4-ACFB-C4A657545372";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.929338777274577 25.988864413345453 -20.871208453769082 ;
+	setAttr ".t" -type "double3" 14.55017886832365 19.609704504394518 -14.492048544818154 ;
 	setAttr ".r" -type "double3" 144.73561031724532 44.999999999999964 180 ;
 	setAttr ".rp" -type "double3" 1.3253287356462806e-15 2.6645352591003757e-15 0 ;
 	setAttr ".rpt" -type "double3" -1.0158673956430808e-14 -3.7120234128005808e-14 3.968079537309106e-15 ;
@@ -26,7 +26,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2A40FD89-4699-DCC0-8A25-F9A7F54B1752";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 36.084069513913931;
+	setAttr ".coi" 25.035040442004487;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -51706,6 +51706,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
 connectAttr ":initialShadingGroup.mwc" "pasted__pCubeShape2.iog.og[1].gco";
 connectAttr "groupId151.id" "pasted__pCubeShape2.ciog.cog[1].cgid";
 connectAttr "groupId13.id" "pTorus1Shape.iog.og[0].gid";
