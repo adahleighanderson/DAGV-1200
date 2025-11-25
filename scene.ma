@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene.ma
-//Last modified: Tue, Nov 25, 2025 10:33:26 AM
+//Last modified: Tue, Nov 25, 2025 10:48:07 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,24 +13,22 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "318DA6EF-4C0A-7F11-9225-09B0A87F792C";
+fileInfo "UUID" "410516F6-47B3-7DA3-0BBC-DBB515D29999";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "36A31958-4975-32E1-ADB0-C9BBF47B260F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.271416902779499 3.4647268527575137 -3.4451568749023833 ;
-	setAttr ".r" -type "double3" 178.82115890979676 81.527801238847132 -179.99999999999827 ;
-	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 0 ;
-	setAttr ".rpt" -type "double3" -4.3679392136380473e-15 -1.0533195797035936e-15 2.9228978954383209e-14 ;
+	setAttr ".t" -type "double3" -7.8131945357995392e-15 7.1038024979499159 20.956390583292347 ;
+	setAttr ".rpt" -type "double3" -3.135596708172433e-15 5.2342359607038378e-15 3.5590173265499149e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1AF73E10-4B41-646B-D3A1-1092F343A212";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.140769531891724;
+	setAttr ".coi" 21.405670867964133;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.54525267112484954 2.8652077744693067 0.84722946069383509 ;
+	setAttr ".tp" -type "double3" -1.0948791243971971e-14 7.1038024979499212 -0.44928028467175096 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "E382A359-4DCB-E99E-7FCD-DB8118654B99";
@@ -54,19 +52,18 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "7C9E51BC-43C2-7651-698E-D98EF9D9981B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.0999996487712 2.1400837898254905 -5.2684457565378661e-07 ;
-	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
-	setAttr ".rpt" -type "double3" 2.848526082388144e-14 -5.1076248350212194e-14 -1.6196009858296611e-13 ;
+	setAttr ".t" -type "double3" -2.2382096176443156e-13 6.87118424028729 999.65071971533007 ;
+	setAttr ".rpt" -type "double3" 1.5845766192707194e-15 -5.1076248350212194e-14 -9.3583082198691284e-14 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "F6C00ED4-4B94-51CD-28E7-C19F194B00EF";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1000000000013;
-	setAttr ".ow" 15.30957806252885;
+	setAttr ".coi" 1000.1000000000017;
+	setAttr ".ow" 78.831629485416158;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" -3.5123002817272209e-07 2.1400837898254395 -5.2684495968069454e-07 ;
+	setAttr ".tp" -type "double3" -2.2223638514516084e-13 6.8711842402872385 -0.44928028467177228 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -89,28 +86,13 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "pCube1";
-	rename -uid "CBB47BB6-43DA-DF05-B310-518A79A333D5";
-createNode mesh -n "pCubeShape1" -p "pCube1";
-	rename -uid "A4091AA6-4F18-1C4D-D50A-478BCCF139E5";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  -6.389214 0.36836854 6.389214 
-		6.389214 0.36836854 6.389214 -6.389214 -0.36836854 6.389214 6.389214 -0.36836854 
-		6.389214 -6.389214 -0.36836854 -6.389214 6.389214 -0.36836854 -6.389214 -6.389214 
-		0.36836854 -6.389214 6.389214 0.36836854 -6.389214;
 createNode transform -n "tree";
 	rename -uid "991C65EE-4CD4-55E7-BC21-918CF95423D3";
 	setAttr ".t" -type "double3" -2.2562821634701886 0 -4.1809834609751704 ;
 	setAttr ".s" -type "double3" 0.58022782447490062 0.58022782447490062 0.58022782447490062 ;
 createNode transform -n "pCone3" -p "tree";
 	rename -uid "BCCC414A-4D4A-A360-39DB-4F8EEB38EE88";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 10.152833246632849 0 ;
 	setAttr ".s" -type "double3" 1.1876867390953314 1.1876867390953314 1.1876867390953314 ;
 createNode mesh -n "pConeShape3" -p "pCone3";
@@ -196,6 +178,7 @@ createNode mesh -n "pConeShape3" -p "pCone3";
 	setAttr ".dr" 1;
 createNode transform -n "pCone2" -p "tree";
 	rename -uid "8FE482A0-4024-A700-B7D7-EFA3C278F9CB";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 8.3287937208472584 0 ;
 	setAttr ".s" -type "double3" 1.9188153470436311 1.9188153470436311 1.9188153470436311 ;
 createNode mesh -n "pConeShape2" -p "pCone2";
@@ -283,6 +266,7 @@ createNode mesh -n "pConeShape2" -p "pCone2";
 	setAttr ".dr" 1;
 createNode transform -n "pCone1" -p "tree";
 	rename -uid "67BAFFF1-4016-3B5B-E738-49970919C5BF";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 5.7442772000698863 0 ;
 	setAttr ".s" -type "double3" 2.7767391535582142 2.7767391535582142 2.7767391535582142 ;
 createNode mesh -n "pConeShape1" -p "pCone1";
@@ -641,21 +625,11 @@ createNode transform -n "transform8" -p "pCylinder2";
 	setAttr ".v" no;
 createNode mesh -n "pCylinderShape2" -p "transform8";
 	rename -uid "B67E9B16-4BFF-E1ED-22D7-B68951D9F71C";
-	setAttr -s 8 ".wm";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 8 ".iog";
 	setAttr -s 2 ".iog[0].og";
-	setAttr -s 2 ".iog[1].og";
-	setAttr -s 2 ".iog[2].og";
-	setAttr -s 2 ".iog[3].og";
-	setAttr -s 2 ".iog[4].og";
-	setAttr -s 2 ".iog[5].og";
-	setAttr -s 2 ".iog[6].og";
-	setAttr -s 2 ".iog[7].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 8 ".ciog";
 	setAttr ".pv" -type "double2" 0.5 0.54274791479110718 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
@@ -677,105 +651,181 @@ createNode mesh -n "pCylinderShape2" -p "transform8";
 		-1.1920929e-07 0.02618663 -9.2993069e-08 -1.1920929e-07 0.037033636 -0.026186714 
 		-1.1920929e-07 0.02618663 -0.037033722 -1.1920929e-07 0 -0.026186714 -1.1920929e-07 
 		-0.02618663 -9.2993069e-08 -1.1920929e-07 -0.037033636;
-createNode transform -n "group1";
-	rename -uid "DC9AE6F1-48E1-26EB-A276-509AFDC9D678";
-	setAttr ".rp" -type "double3" -0.26494592641768611 3.7528878722769416 1.639830544020171e-06 ;
-	setAttr ".sp" -type "double3" -0.26494592641768611 3.7528878722769416 1.639830544020171e-06 ;
-createNode transform -n "pCylinder3" -p "group1";
-	rename -uid "357FF0CF-4F1C-CD52-EB5B-53A8A698136D";
-	setAttr ".t" -type "double3" 2.2624251196010436 3.7528878722769412 0 ;
-	setAttr ".r" -type "double3" 0 45.000000000000007 0 ;
-	setAttr ".rp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".rpt" -type "double3" 3.3306690738754696e-16 0 2.2204460492503131e-16 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-createNode transform -n "transform7" -p "pCylinder3";
-	rename -uid "6C3B6973-4DF0-98A9-0F9A-3D8D81188CCD";
+createNode transform -n "gazebo1:gazebo";
+	rename -uid "11437D8C-4A56-F860-7BCC-48A3948C21C1";
 	setAttr ".v" no;
-createNode transform -n "pCylinder4" -p "group1";
-	rename -uid "51CFDDF4-4839-ED91-F6A7-509125FB6E15";
-	setAttr ".t" -type "double3" -2.295763465554046e-06 3.7528878722769412 -2.2624241357034225 ;
-	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
-	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
-	setAttr ".rp" -type "double3" -2.2624257755339663 3.4016884292977658 1.6398305433540376e-06 ;
-	setAttr ".rpt" -type "double3" 2.262427415364511 0 2.2624241357034234 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".spt" -type "double3" -4.4408920985006281e-16 0 4.2351647362715036e-22 ;
-createNode transform -n "transform6" -p "pCylinder4";
-	rename -uid "9DB296AE-47E2-6BDC-9CA7-3C94FE14F472";
-	setAttr ".v" no;
-createNode transform -n "pCylinder5" -p "group1";
-	rename -uid "533D17C7-4430-B533-06A3-E49C2EA58150";
-	setAttr ".t" -type "double3" -1.5997784232795196 3.7528878722769412 -1.5997738084454607 ;
-	setAttr ".r" -type "double3" 0 135 0 ;
-	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
-	setAttr ".rp" -type "double3" -2.2624257755339667 3.4016884292977658 1.6398305433540379e-06 ;
-	setAttr ".rpt" -type "double3" 3.8622035428805663 0 1.5997738084454616 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".spt" -type "double3" -8.8817841970012602e-16 0 6.3527471044072582e-22 ;
-createNode transform -n "transform5" -p "pCylinder5";
-	rename -uid "5391A0BB-4CC5-7993-522C-48AD619F2E84";
-	setAttr ".v" no;
-createNode transform -n "pCylinder6" -p "group1";
-	rename -uid "1D2BF029-4301-E51B-9C02-4F89991F5BCD";
-	setAttr ".t" -type "double3" -2.2624264314668867 3.7528878722769412 3.2796610871521636e-06 ;
-	setAttr ".r" -type "double3" 0 180 0 ;
-	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
-	setAttr ".rp" -type "double3" -2.2624257755339667 3.4016884292977658 1.6398305433540379e-06 ;
-	setAttr ".rpt" -type "double3" 4.5248515510679335 0 -3.2796610864310091e-06 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".spt" -type "double3" -8.8817841970012602e-16 0 6.3527471044072582e-22 ;
-createNode transform -n "transform4" -p "pCylinder6";
-	rename -uid "80754E93-45CC-2F79-1A8D-89A654B9BC60";
-	setAttr ".v" no;
-createNode transform -n "pCylinder7" -p "group1";
-	rename -uid "0A6E3102-433E-EB02-F848-D395CAB8C7E4";
-	setAttr ".t" -type "double3" -1.5997761042089245 3.7528878722769412 1.5997794071771427 ;
-	setAttr ".r" -type "double3" 0 225 0 ;
-	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
-	setAttr ".rp" -type "double3" -2.2624257755339667 3.4016884292977658 1.6398305433540379e-06 ;
-	setAttr ".rpt" -type "double3" 3.8622012238099703 0 -1.5997794071771421 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".spt" -type "double3" -8.8817841970012602e-16 0 6.3527471044072582e-22 ;
-createNode transform -n "transform3" -p "pCylinder7";
-	rename -uid "3D014401-464D-09C3-6572-A595AEA2CB7D";
-	setAttr ".v" no;
-createNode transform -n "pCylinder8" -p "group1";
-	rename -uid "FD64ABE0-4BFF-69E4-73EF-2FA5FDCCEABC";
-	setAttr ".t" -type "double3" 9.8389762248629609e-07 3.7528878722769412 2.2624274153645105 ;
-	setAttr ".r" -type "double3" 0 -89.999999999999986 0 ;
-	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
-	setAttr ".rp" -type "double3" -2.2624257755339667 3.4016884292977658 1.6398305433540379e-06 ;
-	setAttr ".rpt" -type "double3" 2.2624241357034247 0 -2.2624274153645105 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".spt" -type "double3" -8.8817841970012602e-16 0 6.3527471044072582e-22 ;
-createNode transform -n "transform2" -p "pCylinder8";
-	rename -uid "87D3DBE7-4A35-23F3-992F-908D2CF59204";
-	setAttr ".v" no;
-createNode transform -n "pCylinder9" -p "group1";
-	rename -uid "133560C8-4132-D9C3-0A67-7592ED31584C";
-	setAttr ".t" -type "double3" 1.5997771114136801 3.7528878722769412 1.5997770881065478 ;
-	setAttr ".r" -type "double3" 0 -44.999999999999993 0 ;
-	setAttr ".s" -type "double3" 1.0000000000000007 1 1.0000000000000007 ;
-	setAttr ".rp" -type "double3" -2.2624257755339672 3.4016884292977658 1.6398305433540383e-06 ;
-	setAttr ".rpt" -type "double3" 0.66264800818736802 0 -1.5997770881065478 ;
-	setAttr ".sp" -type "double3" -2.2624257755339658 3.4016884292977658 1.6398305433540372e-06 ;
-	setAttr ".spt" -type "double3" -1.3322676295501894e-15 0 1.0587911840678769e-21 ;
-createNode transform -n "transform1" -p "pCylinder9";
-	rename -uid "69D72AEF-4732-7C8F-76D5-60B1AF631269";
-	setAttr ".v" no;
-createNode transform -n "legs_and_roof";
-	rename -uid "67F37426-42A0-8D09-77F5-168462308620";
-	setAttr ".r" -type "double3" 0 22.5 0 ;
-	setAttr ".rp" -type "double3" -1.0724460344224696e-06 4.6413860357489147 -3.3705446795817551e-06 ;
-	setAttr ".rpt" -type "double3" -2.1175823681357508e-22 0 -2.6469779601696886e-22 ;
-	setAttr ".sp" -type "double3" -1.0724460344224696e-06 4.6413860357489147 -3.3705446795817551e-06 ;
-createNode transform -n "transform10" -p "legs_and_roof";
-	rename -uid "979C7B73-4F58-9E20-7DF8-85A503BD9210";
-	setAttr ".v" no;
-createNode mesh -n "pCone7Shape" -p "transform10";
-	rename -uid "7AC46C1B-42FD-8A82-61F8-6F968221FE11";
+	setAttr ".t" -type "double3" -3.2680692024440781 0 4.4046603374316664 ;
+createNode transform -n "gazebo1:polySurface4" -p "gazebo1:gazebo";
+	rename -uid "F05A529C-4B0A-C3BB-2364-92B58DA8BDED";
+	setAttr ".rp" -type "double3" -3.5762786865234375e-07 4.5242897272109985 -5.9604644775390625e-07 ;
+	setAttr ".sp" -type "double3" -3.5762786865234375e-07 4.5242897272109985 -5.9604644775390625e-07 ;
+createNode transform -n "gazebo1:polySurface6" -p "gazebo1:polySurface4";
+	rename -uid "BCBC4814-48B4-7CB2-1C84-61B75E3CAD3C";
+createNode mesh -n "gazebo1:polySurfaceShape2" -p "gazebo1:polySurface6";
+	rename -uid "B3165273-4F1F-9925-BD46-98983E98A700";
 	setAttr -k off ".v";
-	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:59]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 42 ".vt[0:41]"  2.8021276 1.88899052 -0.91046637 2.38363218 1.88899052 -1.73180997
+		 1.73180997 1.88899052 -2.38363194 0.91046631 1.88899052 -2.80212712 0 1.88899052 -2.94633079
+		 -0.91046631 1.88899052 -2.80212712 -1.73180962 1.88899052 -2.38363147 -2.38363123 1.88899052 -1.7318095
+		 -2.80212641 1.88899052 -0.91046602 -2.94633007 1.88899052 0 -2.80212641 1.88899052 0.91046602
+		 -2.38363099 1.88899052 1.73180926 -1.73180926 1.88899052 2.38363099 -0.91046602 1.88899052 2.80212617
+		 -8.7807457e-08 1.88899052 2.94632959 0.91046578 1.88899052 2.80212593 1.7318089 1.88899052 2.38363075
+		 2.38363051 1.88899052 1.73180914 2.80212569 1.88899052 0.91046584 2.94632936 1.88899052 0
+		 2.8021276 2.18318319 -0.91046637 2.38363218 2.18318319 -1.73180997 1.73180997 2.18318319 -2.38363194
+		 0.91046631 2.18318319 -2.80212712 0 2.18318319 -2.94633079 -0.91046631 2.18318319 -2.80212712
+		 -1.73180962 2.18318319 -2.38363147 -2.38363123 2.18318319 -1.7318095 -2.80212641 2.18318319 -0.91046602
+		 -2.94633007 2.18318319 0 -2.80212641 2.18318319 0.91046602 -2.38363099 2.18318319 1.73180926
+		 -1.73180926 2.18318319 2.38363099 -0.91046602 2.18318319 2.80212617 -8.7807457e-08 2.18318319 2.94632959
+		 0.91046578 2.18318319 2.80212593 1.7318089 2.18318319 2.38363075 2.38363051 2.18318319 1.73180914
+		 2.80212569 2.18318319 0.91046584 2.94632936 2.18318319 0 0 1.88899052 0 0 2.18318319 0;
+	setAttr -s 100 ".ed[0:99]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 8 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 16 0 16 17 0 17 18 0
+		 18 19 0 19 0 0 20 21 0 21 22 0 22 23 0 23 24 0 24 25 0 25 26 0 26 27 0 27 28 0 28 29 0
+		 29 30 0 30 31 0 31 32 0 32 33 0 33 34 0 34 35 0 35 36 0 36 37 0 37 38 0 38 39 0 39 20 0
+		 0 20 1 1 21 1 2 22 1 3 23 1 4 24 1 5 25 1 6 26 1 7 27 1 8 28 1 9 29 1 10 30 1 11 31 1
+		 12 32 1 13 33 1 14 34 1 15 35 1 16 36 1 17 37 1 18 38 1 19 39 1 40 0 1 40 1 1 40 2 1
+		 40 3 1 40 4 1 40 5 1 40 6 1 40 7 1 40 8 1 40 9 1 40 10 1 40 11 1 40 12 1 40 13 1
+		 40 14 1 40 15 1 40 16 1 40 17 1 40 18 1 40 19 1 20 41 1 21 41 1 22 41 1 23 41 1 24 41 1
+		 25 41 1 26 41 1 27 41 1 28 41 1 29 41 1 30 41 1 31 41 1 32 41 1 33 41 1 34 41 1 35 41 1
+		 36 41 1 37 41 1 38 41 1 39 41 1;
+	setAttr -s 60 -ch 200 ".fc[0:59]" -type "polyFaces" 
+		f 4 0 41 -21 -41
+		mu 0 4 0 1 2 3
+		f 4 1 42 -22 -42
+		mu 0 4 1 4 5 2
+		f 4 2 43 -23 -43
+		mu 0 4 4 6 7 5
+		f 4 3 44 -24 -44
+		mu 0 4 6 8 9 7
+		f 4 4 45 -25 -45
+		mu 0 4 8 10 11 9
+		f 4 5 46 -26 -46
+		mu 0 4 10 12 13 11
+		f 4 6 47 -27 -47
+		mu 0 4 12 14 15 13
+		f 4 7 48 -28 -48
+		mu 0 4 14 16 17 15
+		f 4 8 49 -29 -49
+		mu 0 4 16 18 19 17
+		f 4 9 50 -30 -50
+		mu 0 4 18 20 21 19
+		f 4 10 51 -31 -51
+		mu 0 4 20 22 23 21
+		f 4 11 52 -32 -52
+		mu 0 4 22 24 25 23
+		f 4 12 53 -33 -53
+		mu 0 4 24 26 27 25
+		f 4 13 54 -34 -54
+		mu 0 4 26 28 29 27
+		f 4 14 55 -35 -55
+		mu 0 4 28 30 31 29
+		f 4 15 56 -36 -56
+		mu 0 4 30 32 33 31
+		f 4 16 57 -37 -57
+		mu 0 4 32 34 35 33
+		f 4 17 58 -38 -58
+		mu 0 4 34 36 37 35
+		f 4 18 59 -39 -59
+		mu 0 4 36 38 39 37
+		f 4 19 40 -40 -60
+		mu 0 4 38 40 41 39
+		f 3 -1 -61 61
+		mu 0 3 42 43 44
+		f 3 -2 -62 62
+		mu 0 3 45 42 44
+		f 3 -3 -63 63
+		mu 0 3 46 45 44
+		f 3 -4 -64 64
+		mu 0 3 47 46 44
+		f 3 -5 -65 65
+		mu 0 3 48 47 44
+		f 3 -6 -66 66
+		mu 0 3 49 48 44
+		f 3 -7 -67 67
+		mu 0 3 50 49 44
+		f 3 -8 -68 68
+		mu 0 3 51 50 44
+		f 3 -9 -69 69
+		mu 0 3 52 51 44
+		f 3 -10 -70 70
+		mu 0 3 53 52 44
+		f 3 -11 -71 71
+		mu 0 3 54 53 44
+		f 3 -12 -72 72
+		mu 0 3 55 54 44
+		f 3 -13 -73 73
+		mu 0 3 56 55 44
+		f 3 -14 -74 74
+		mu 0 3 57 56 44
+		f 3 -15 -75 75
+		mu 0 3 58 57 44
+		f 3 -16 -76 76
+		mu 0 3 59 58 44
+		f 3 -17 -77 77
+		mu 0 3 60 59 44
+		f 3 -18 -78 78
+		mu 0 3 61 60 44
+		f 3 -19 -79 79
+		mu 0 3 62 61 44
+		f 3 -20 -80 60
+		mu 0 3 43 62 44
+		f 3 20 81 -81
+		mu 0 3 63 64 65
+		f 3 21 82 -82
+		mu 0 3 64 66 65
+		f 3 22 83 -83
+		mu 0 3 66 67 65
+		f 3 23 84 -84
+		mu 0 3 67 68 65
+		f 3 24 85 -85
+		mu 0 3 68 69 65
+		f 3 25 86 -86
+		mu 0 3 69 70 65
+		f 3 26 87 -87
+		mu 0 3 70 71 65
+		f 3 27 88 -88
+		mu 0 3 71 72 65
+		f 3 28 89 -89
+		mu 0 3 72 73 65
+		f 3 29 90 -90
+		mu 0 3 73 74 65
+		f 3 30 91 -91
+		mu 0 3 74 75 65
+		f 3 31 92 -92
+		mu 0 3 75 76 65
+		f 3 32 93 -93
+		mu 0 3 76 77 65
+		f 3 33 94 -94
+		mu 0 3 77 78 65
+		f 3 34 95 -95
+		mu 0 3 78 79 65
+		f 3 35 96 -96
+		mu 0 3 79 80 65
+		f 3 36 97 -97
+		mu 0 3 80 81 65
+		f 3 37 98 -98
+		mu 0 3 81 82 65
+		f 3 38 99 -99
+		mu 0 3 82 83 65
+		f 3 39 80 -100
+		mu 0 3 83 63 65;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "gazebo1:polySurface8" -p "gazebo1:polySurface4";
+	rename -uid "ABD3FF47-464D-9E5C-6DD2-7E9161285B5C";
+createNode mesh -n "gazebo1:polySurfaceShape4" -p "gazebo1:polySurface8";
+	rename -uid "CD40A4A5-4716-07B9-C7EF-7E94DC5C32B7";
+	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -784,13 +834,1186 @@ createNode mesh -n "pCone7Shape" -p "transform10";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform1" ;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform2" ;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform3" ;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform4" ;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform5" ;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform6" ;
-parent -s -nc -r -add "|pCylinder2|transform8|pCylinderShape2" "transform7" ;
+createNode mesh -n "gazebo1:polySurfaceShape12" -p "gazebo1:polySurface8";
+	rename -uid "4F20727E-4F2A-6B97-12DB-688F600B77DE";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:8]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 18 ".uvst[0].uvsp[0:17]" -type "float2" 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 9 ".vt[0:8]"  1.052836418 5.34809017 -2.54175973 -1.052831411 5.34809017 -2.54176188
+		 -2.54175568 5.34809017 -1.05283165 -2.54175901 5.34809017 1.052825809 -1.052829742 5.34809017 2.54175591
+		 1.052830815 5.34809017 2.54175448 2.54175782 5.34809017 1.052829742 2.54175711 5.34809017 -1.052832365
+		 1.2297494e-06 7.15958881 1.0990454e-06;
+	setAttr -s 16 ".ed[0:15]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 0 8 0 1 8 0 2 8 0 3 8 0 4 8 0 5 8 0 6 8 0 7 8 0;
+	setAttr -s 9 -ch 32 ".fc[0:8]" -type "polyFaces" 
+		f 8 -8 -7 -6 -5 -4 -3 -2 -1
+		mu 0 8 0 1 2 3 4 5 6 7
+		f 3 0 9 -9
+		mu 0 3 8 9 10
+		f 3 1 10 -10
+		mu 0 3 9 11 10
+		f 3 2 11 -11
+		mu 0 3 11 12 10
+		f 3 3 12 -12
+		mu 0 3 12 13 10
+		f 3 4 13 -13
+		mu 0 3 13 14 10
+		f 3 5 14 -14
+		mu 0 3 14 15 10
+		f 3 6 15 -15
+		mu 0 3 15 16 10
+		f 3 7 8 -16
+		mu 0 3 16 17 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "gazebo1:polySurface14" -p "gazebo1:polySurface4";
+	rename -uid "21E35F69-470D-418D-D6C8-0D9E862DE10C";
+createNode mesh -n "gazebo1:polySurfaceShape10" -p "gazebo1:polySurface14";
+	rename -uid "E1FBEDE7-475F-E351-3EBE-5080CC6CD986";
+	setAttr -k off ".v";
+	setAttr -s 8 ".iog";
+	setAttr -s 2 ".iog[0].og";
+	setAttr -s 2 ".iog[1].og";
+	setAttr -s 2 ".iog[2].og";
+	setAttr -s 2 ".iog[3].og";
+	setAttr -s 2 ".iog[4].og";
+	setAttr -s 2 ".iog[5].og";
+	setAttr -s 2 ".iog[6].og";
+	setAttr -s 2 ".iog[7].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999997020083026 0.49424846892105734 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "gazebo1:polySurfaceShape13" -p "gazebo1:polySurface14";
+	rename -uid "639E5782-4DB2-82BE-D00C-06A6C2DC4D0B";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 8 ".iog";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[1].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[2].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[3].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[4].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[5].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[6].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[7].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999997020083026 0.49424846892105734 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 154 ".uvst[0].uvsp[0:153]" -type "float2" 0.050593622 0.051502079
+		 0.051103987 0.10291076 0.74795234 0.14672063 0 0.051964074 0.051547587 0.14786515
+		 0.2492767 0.14787257 0.82535064 0.098224729 0.82484013 0.046815991 0.74793071 0.55364221
+		 0.92982507 7.7694613e-06 0.1867245 0.050237715 0.12905855 0.050893188 0.019190226
+		 0.94839704 0.24415296 0.049705476 0.94398224 0.057141736 0.30077761 0.049252361 0.59169024
+		 0.41059989 0.35632533 0.04891941 0.9439823 0.11245786 0.41077325 0.049193323 0.81425434
+		 0.91932845 0.46502236 0.048976541 0.94439739 0.16570307 0.51957637 0.048616022 0.25026661
+		 0.30751982 0.57500285 0.048574984 0.94440007 0.11245584 0.63148862 0.048425794 0.25027385
+		 0.73910618 0.68879199 0.048126221 0.9302299 0.05713737 0.74633628 0.047753602 0.12960789
+		 0.1019733 0.87828511 0.057134308 0.74688566 0.09883371 0.17617673 0.17560732 0.68921965
+		 0.099489182 0.63179117 0.10002139 0.57516658 0.10047448 0.51961881 0.10080746 0.46517095
+		 0.10053357 0.41092178 0.1007503 0.3563678 0.10111088 0.30094126 0.10115191 0.24445553
+		 0.1013011 0.18715218 0.10160068 0.981758 1.3049521e-07 0.26949435 0.63444221 0.99592394
+		 0.05713265 0.26019886 0.20285273 0.99592388 0.11245147 0.70958686 0.91935861 0.8924551
+		 0.16570878 0.60161448 0.51526773 0.89245164 0.11245856 1.0062009e-05 0.84372574 0.67483038
+		 0.58137584 0.67485356 0.14671674 0.38592499 0.89533246 0.38591462 0.94846863 0.25026697
+		 0.46372721 0.25026834 0.41059101 0.76102036 0.58135128 0.81415659 0.5813359 0.60161823
+		 0.25440124 0.60161555 0.30753744 0.63620901 0.68604338 0.63619888 0.73917955 0.12463021
+		 0.58252692 0.051531374 0.58252424 0 0.58252251 0.17616153 0.58252907 0.63618922 0.79071093
+		 0.63621897 0.63451195 0.60161316 0.35906881 0.60162103 0.20286989 0.86568791 0.5813207
+		 0.70948905 0.58136594 0.2502695 0.35905969 0.25026542 0.51525855 0.38590479 1 0.38593531
+		 0.84380114 0.62329912 0.5813731 0.79946208 0.55364496 1.6272068e-05 0.14786321 0.87594455
+		 0.097762018 0.80613041 2.5033951e-06 0.24926037 0.58253187 0.12464547 0.17560536
+		 0.72945762 0.1451543 0.14648654 0.0045725703 0.92981642 0.057141956 0.14780745 0.14796308
+		 0.79948372 0.14672318 0.069813818 0.14972445 0.8725825 0.14672704 0.20391743 0.14759636
+		 0.25840929 0.14792472 0.31093249 0.14877337 0.46357149 0.14972687 0.51437849 0.14948151
+		 0.56558043 0.14818639 0.61835659 0.14681065 0.67311448 0.14574549 0.98176128 0.057134304
+		 0.72813672 0.0017637908 0.67202675 0.0021305382 0.61753494 0.0018021464 0.56501168
+		 0.0009534657 0.5140093 6.6429377e-05 0.36156562 0.00024539232 0.31036371 0.001540482
+		 0.25758758 0.0029162467 0.20282972 0.0039813817 0.94398296 0.11245782 0.019221038
+		 0.79059333 0.94398642 0.16570465 0.59168613 0.56840366 0.94439256 0.11245628 0.65645057
+		 0.91937411 0.94439256 0.057139814 0.25027457 0.14971608 0.93022668 3.1994896e-06
+		 0.25030386 0.5813024 0 0.89525712 0.87829375 1.3043245e-07 0.60161585 0.46373636
+		 0.89245093 0.057142518 0.41237271 0 0.41265389 0.14944524 0.26019627 0.25438413 0.99592865
+		 0.16569823 0.26948455 0.68597358 0.99593145 0.11244869 0.019180167 0.99992841 0.38594568
+		 0.79066485 0.59169155 0.35906851 0.25026408 0.5683949 0.86578572 0.91931355 0.65635282
+		 0.58138132 0.25026402 0.35905114 0.60162371 0.14973366 0.25026402 0.79063749 0.6362291
+		 0.58137578 0.87542665 0.046255112 0.80756319 0.14541131 0.76111823 0.91934383 0.4632903
+		 0.00028166175 0.89245099 0.11246201 0.36193487 0.14966041 0.068381026 0.0043156445
+		 0.00051722868 0.10347101 0.87255943 0.58138639 0.62332219 0.14671379;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 84 ".vt[0:83]"  -0.80394953 4.28035212 -2.14935684 -0.80394989 4.28035164 -2.035961628
+		 -0.80394953 5.34809017 -2.14935684 -0.80394989 5.34809065 -2.035961628 0.8039543 5.34809017 -2.14935684
+		 0.80395395 5.34809065 -2.035961628 0.8039543 4.28035212 -2.14935684 0.80395395 4.28035164 -2.035961628
+		 0.64309961 5.34809017 -2.14935684 0.52617282 5.34809017 -2.14935684 0.40924603 5.34809017 -2.14935684
+		 0.2923193 5.34809017 -2.14935684 0.17539254 5.34809017 -2.14935684 0.05846576 5.34809017 -2.14935684
+		 -0.058461003 5.34809017 -2.14935684 -0.17538777 5.34809017 -2.14935684 -0.29231453 5.34809017 -2.14935684
+		 -0.40924129 5.34809017 -2.14935684 -0.52616805 5.34809017 -2.14935684 -0.64309484 5.34809017 -2.14935684
+		 -0.64309484 4.34279919 -2.14935684 -0.52616805 4.38993645 -2.14935684 -0.40924129 4.43298244 -2.14935684
+		 -0.29231453 4.46742344 -2.14935684 -0.17538777 4.48964691 -2.14935684 -0.058461003 4.49732304 -2.14935684
+		 0.05846576 4.49732304 -2.14935684 0.17539254 4.48964691 -2.14935684 0.2923193 4.46742344 -2.14935684
+		 0.40924603 4.43298244 -2.14935684 0.52617282 4.38993645 -2.14935684 0.64309961 4.34279919 -2.14935684
+		 -0.6430952 4.34279919 -2.035961628 -0.52616841 4.38993645 -2.035961628 -0.40924162 4.43298244 -2.035961628
+		 -0.29231489 4.46742344 -2.035961628 -0.17538813 4.48964691 -2.035961628 -0.058461364 4.49732304 -2.035961628
+		 0.058465399 4.49732304 -2.035961628 0.17539218 4.48964691 -2.035961628 0.29231894 4.46742344 -2.035961628
+		 0.4092457 4.43298244 -2.035961628 0.52617246 4.38993645 -2.035961628 0.64309925 4.34279919 -2.035961628
+		 -0.6430952 5.34809065 -2.035961628 -0.52616841 5.34809065 -2.035961628 -0.40924162 5.34809065 -2.035961628
+		 -0.29231489 5.34809065 -2.035961628 -0.17538813 5.34809065 -2.035961628 -0.058461364 5.34809065 -2.035961628
+		 0.058465399 5.34809065 -2.035961628 0.17539218 5.34809065 -2.035961628 0.29231894 5.34809065 -2.035961628
+		 0.4092457 5.34809065 -2.035961628 0.52617246 5.34809065 -2.035961628 0.64309925 5.34809065 -2.035961628
+		 -0.80394948 4.39161873 -2.14935684 -0.64309484 4.45265532 -2.14935684 -0.52616805 4.49885845 -2.14935684
+		 -0.40924129 4.54110956 -2.14935684 -0.29231453 4.57494354 -2.14935684 -0.17538777 4.59678793 -2.14935684
+		 -0.058461003 4.60433435 -2.14935684 0.05846576 4.60433435 -2.14935684 0.17539254 4.59678793 -2.14935684
+		 0.2923193 4.57494354 -2.14935684 0.40924603 4.54110956 -2.14935684 0.52617282 4.49885845 -2.14935684
+		 0.64309961 4.45265532 -2.14935684 0.8039543 4.39161873 -2.14935684 0.80395395 4.39161873 -2.035961628
+		 0.64309925 4.45265532 -2.035961628 0.52617246 4.49885845 -2.035961628 0.4092457 4.54110956 -2.035961628
+		 0.29231891 4.57494354 -2.035961628 0.17539217 4.59678793 -2.035961628 0.058465395 4.60433435 -2.035961628
+		 -0.058461357 4.60433435 -2.035961628 -0.17538811 4.59678793 -2.035961628 -0.29231489 4.57494354 -2.035961628
+		 -0.40924162 4.54110956 -2.035961628 -0.52616841 4.49885845 -2.035961628 -0.6430952 4.45265532 -2.035961628
+		 -0.80394989 4.39161873 -2.035961628;
+	setAttr -s 164 ".ed[0:163]"  0 1 0 2 3 0 4 5 0 6 7 0 0 56 0 1 83 0 4 69 0
+		 5 70 0 18 58 0 21 20 0 20 57 1 18 17 0 17 59 0 22 21 0 16 60 0 23 22 0 16 15 0 15 61 0
+		 24 23 0 14 62 0 25 24 0 14 13 0 13 63 0 26 25 0 12 64 0 27 26 0 12 11 0 11 65 0 28 27 0
+		 10 66 0 29 28 0 10 9 0 9 67 0 30 29 0 8 68 0 31 30 0 33 32 0 32 20 1 34 33 0 35 34 0
+		 36 35 0 37 36 0 38 37 0 39 38 0 40 39 0 41 40 0 42 41 0 31 43 1 43 42 0 44 82 0 46 45 0
+		 48 47 0 50 49 0 52 51 0 54 53 0 43 71 1 3 44 0 19 2 0 32 1 0 0 20 0 6 31 0 8 4 0
+		 7 43 0 5 55 0 30 42 1 29 41 1 28 40 1 27 39 1 26 38 1 25 37 1 24 36 1 23 35 1 22 34 1
+		 21 33 1 42 72 1 41 73 1 40 74 1 39 75 1 38 76 1 37 77 1 36 78 1 35 79 1 34 80 1 33 81 1
+		 9 54 0 56 2 0 57 19 0 58 21 1 59 22 1 60 23 1 61 24 1 62 25 1 63 26 1 64 27 1 65 28 1
+		 66 29 1 67 30 1 68 31 1 69 6 0 70 7 0 71 55 0 72 54 0 73 53 0 74 52 0 75 51 0 76 50 0
+		 77 49 0 78 48 0 79 47 0 80 46 0 81 45 0 82 32 1 83 3 0 56 57 1 57 58 0 58 59 1 59 60 0
+		 60 61 1 61 62 0 62 63 1 63 64 0 64 65 1 65 66 0 66 67 1 67 68 0 68 69 1 69 70 1 70 71 1
+		 71 72 0 72 73 1 73 74 0 74 75 1 75 76 0 76 77 1 77 78 0 78 79 1 79 80 0 80 81 1 81 82 0
+		 82 83 1 83 56 1 67 72 0 68 71 0 8 55 0 65 74 0 66 73 0 10 53 0 11 52 0 64 75 0 12 51 0
+		 63 76 0 13 50 0 15 48 0 61 78 0 62 77 0 14 49 0 59 80 0 60 79 0 16 47 0 17 46 0 58 81 0
+		 18 45 0 57 82 0 44 19 0;
+	setAttr -s 75 -ch 300 ".fc[0:74]" -type "polyFaces" 
+		f 4 0 5 140 -5
+		mu 0 4 0 1 151 3
+		f 4 126 99 -4 -99
+		mu 0 4 144 85 6 7
+		f 4 114 87 9 10
+		mu 0 4 90 113 10 11
+		f 4 115 88 13 -88
+		mu 0 4 113 112 13 10
+		f 4 116 89 15 -89
+		mu 0 4 112 111 15 13
+		f 4 117 90 18 -90
+		mu 0 4 111 110 17 15
+		f 4 118 91 20 -91
+		mu 0 4 110 128 19 17
+		f 4 119 92 23 -92
+		mu 0 4 128 147 21 19
+		f 4 120 93 25 -93
+		mu 0 4 147 109 23 21
+		f 4 121 94 28 -94
+		mu 0 4 109 108 25 23
+		f 4 122 95 30 -95
+		mu 0 4 108 107 27 25
+		f 4 123 96 33 -96
+		mu 0 4 107 106 29 27
+		f 4 124 97 35 -97
+		mu 0 4 106 105 31 29
+		f 4 -38 58 -1 59
+		mu 0 4 11 32 1 0
+		f 4 -59 -112 139 -6
+		mu 0 4 1 32 92 94
+		f 4 113 -11 -60 4
+		mu 0 4 150 90 11 0
+		f 4 60 -98 125 98
+		mu 0 4 7 31 105 86
+		f 4 3 62 -48 -61
+		mu 0 4 7 6 34 31
+		f 4 127 -56 -63 -100
+		mu 0 4 145 89 34 6
+		f 4 -36 47 48 -65
+		mu 0 4 29 31 34 36
+		f 4 -34 64 46 -66
+		mu 0 4 27 29 36 37
+		f 4 -31 65 45 -67
+		mu 0 4 25 27 37 38
+		f 4 -29 66 44 -68
+		mu 0 4 23 25 38 39
+		f 4 -26 67 43 -69
+		mu 0 4 21 23 39 40
+		f 4 -24 68 42 -70
+		mu 0 4 19 21 40 41
+		f 4 -21 69 41 -71
+		mu 0 4 17 19 41 42
+		f 4 -19 70 40 -72
+		mu 0 4 15 17 42 43
+		f 4 -16 71 39 -73
+		mu 0 4 13 15 43 44
+		f 4 -10 73 36 37
+		mu 0 4 11 10 45 32
+		f 4 -14 72 38 -74
+		mu 0 4 10 13 44 45
+		f 4 -49 55 128 -75
+		mu 0 4 36 34 89 103
+		f 4 -47 74 129 -76
+		mu 0 4 37 36 103 102
+		f 4 -46 75 130 -77
+		mu 0 4 38 37 102 101
+		f 4 -45 76 131 -78
+		mu 0 4 39 38 101 100
+		f 4 -44 77 132 -79
+		mu 0 4 40 39 100 99
+		f 4 -43 78 133 -80
+		mu 0 4 41 40 99 129
+		f 4 -42 79 134 -81
+		mu 0 4 42 41 129 149
+		f 4 -41 80 135 -82
+		mu 0 4 43 42 149 98
+		f 4 -40 81 136 -83
+		mu 0 4 44 43 98 97
+		f 4 -37 83 138 111
+		mu 0 4 32 45 96 92
+		f 4 -39 82 137 -84
+		mu 0 4 45 44 97 96
+		f 4 -87 -114 85 -58
+		mu 0 4 2 8 56 57
+		f 4 11 12 -116 -9
+		mu 0 4 58 59 12 124
+		f 4 16 17 -118 -15
+		mu 0 4 60 61 16 126
+		f 4 21 22 -120 -20
+		mu 0 4 62 63 20 146
+		f 4 26 27 -122 -25
+		mu 0 4 64 65 24 130
+		f 4 31 32 -124 -30
+		mu 0 4 66 67 28 132
+		f 4 -126 -35 61 6
+		mu 0 4 4 88 68 69
+		f 4 2 7 -127 -7
+		mu 0 4 69 70 84 4
+		f 4 -101 -128 -8 63
+		mu 0 4 71 35 5 87
+		f 4 -130 101 54 -103
+		mu 0 4 47 123 143 73
+		f 4 -132 103 53 -105
+		mu 0 4 49 121 141 75
+		f 4 -134 105 52 -107
+		mu 0 4 51 119 139 77
+		f 4 -136 107 51 -109
+		mu 0 4 53 117 137 79
+		f 4 -138 109 50 -111
+		mu 0 4 55 115 135 81
+		f 4 -140 -50 -57 -113
+		mu 0 4 152 83 93 95
+		f 4 -141 112 -2 -86
+		mu 0 4 56 82 153 57
+		f 4 -125 141 -129 -143
+		mu 0 4 30 122 46 104
+		f 4 34 142 100 -144
+		mu 0 4 68 88 35 71
+		f 4 -123 144 -131 -146
+		mu 0 4 26 120 48 133
+		f 4 29 145 102 -147
+		mu 0 4 66 132 47 73
+		f 4 -28 147 -104 -145
+		mu 0 4 24 65 74 140
+		f 4 24 148 104 -150
+		mu 0 4 64 130 49 75
+		f 4 -121 150 -133 -149
+		mu 0 4 22 118 50 131
+		f 4 -23 151 -106 -151
+		mu 0 4 20 63 76 138
+		f 4 -18 152 -108 -154
+		mu 0 4 16 61 78 136
+		f 4 -119 153 -135 -155
+		mu 0 4 18 116 52 148
+		f 4 19 154 106 -156
+		mu 0 4 62 146 51 77
+		f 4 -117 156 -137 -158
+		mu 0 4 14 114 54 127
+		f 4 14 157 108 -159
+		mu 0 4 60 126 53 79
+		f 4 -13 159 -110 -157
+		mu 0 4 12 59 80 134
+		f 4 8 160 110 -162
+		mu 0 4 58 124 55 81
+		f 4 -115 162 -139 -161
+		mu 0 4 9 91 33 125
+		f 4 49 -163 86 -164
+		mu 0 4 93 83 8 2
+		f 4 -33 84 -102 -142
+		mu 0 4 28 67 72 142;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "gazebo1:polySurface15" -p "gazebo1:polySurface4";
+	rename -uid "35850A0D-4F1C-61D4-B159-5DB70AC0F6B1";
+createNode mesh -n "gazebo1:polySurfaceShape11" -p "gazebo1:polySurface15";
+	rename -uid "97AF8265-4815-9E60-026B-68AC95116081";
+	setAttr -k off ".v";
+	setAttr -s 8 ".iog";
+	setAttr -s 2 ".iog[0].og";
+	setAttr -s 2 ".iog[1].og";
+	setAttr -s 2 ".iog[2].og";
+	setAttr -s 2 ".iog[3].og";
+	setAttr -s 2 ".iog[4].og";
+	setAttr -s 2 ".iog[5].og";
+	setAttr -s 2 ".iog[6].og";
+	setAttr -s 2 ".iog[7].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.84375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "gazebo1:group" -p "gazebo1:gazebo";
+	rename -uid "0A128F56-4F2D-CA07-3349-80BA1F90DA00";
+	setAttr ".t" -type "double3" 0 -2.0564240934413034 0 ;
+	setAttr ".s" -type "double3" 1 -1.1361033258723749 1 ;
+	setAttr ".rp" -type "double3" 2.2053718566894531e-06 4.8142211437225342 -2.0926592350006104 ;
+	setAttr ".sp" -type "double3" 2.2053718566894531e-06 4.8142211437225342 -2.0926592350006104 ;
+createNode transform -n "gazebo1:pasted__polySurface4" -p "gazebo1:gazebo";
+	rename -uid "34CDF088-4FC3-ACA3-6B3E-1CBB97300850";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 180 0 0 ;
+	setAttr ".s" -type "double3" 1 1.1361033258723749 -1 ;
+	setAttr ".rp" -type "double3" -3.5762786865234375e-07 5.1400606062946359 5.9604644775390625e-07 ;
+	setAttr ".rpt" -type "double3" 0 -10.280121212589272 -1.1920928948783366e-06 ;
+	setAttr ".sp" -type "double3" -3.5762786865234375e-07 4.5242897272109985 -5.9604644775390625e-07 ;
+	setAttr ".spt" -type "double3" 0 0.61577087908363759 1.1920928955078125e-06 ;
+createNode transform -n "gazebo1:pasted__polySurface14" -p "gazebo1:pasted__polySurface4";
+	rename -uid "9D381335-4773-9EBA-DCEB-8F9961ABDD2B";
+createNode mesh -n "gazebo1:pasted__polySurfaceShape14" -p "gazebo1:pasted__polySurface14";
+	rename -uid "A23B1328-4359-815E-2FEB-B2B4961DCF18";
+	setAttr -k off ".v";
+	setAttr -s 8 ".iog";
+	setAttr -s 2 ".iog[0].og";
+	setAttr -s 2 ".iog[1].og";
+	setAttr -s 2 ".iog[2].og";
+	setAttr -s 2 ".iog[3].og";
+	setAttr -s 2 ".iog[4].og";
+	setAttr -s 2 ".iog[5].og";
+	setAttr -s 2 ".iog[6].og";
+	setAttr -s 2 ".iog[7].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.53815148025751114 0.27910876274108887 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "gazebo1:group1" -p "gazebo1:gazebo";
+	rename -uid "D1C76C62-41B3-1F2F-37D4-7D886C602E6D";
+	setAttr ".rp" -type "double3" 2.2204460492503131e-16 3.7381430864334106 -2.2204460492503131e-16 ;
+	setAttr ".sp" -type "double3" 2.2204460492503131e-16 3.7381430864334106 -2.2204460492503131e-16 ;
+createNode transform -n "gazebo1:polySurface16" -p "gazebo1:group1";
+	rename -uid "6F41AAA1-4F08-356C-FB5D-45ADE86055C3";
+	setAttr ".r" -type "double3" 0 45.000000000000007 0 ;
+createNode transform -n "gazebo1:polySurface17" -p "gazebo1:group1";
+	rename -uid "76F09607-460C-87A9-A608-3EBC09E237B6";
+	setAttr ".r" -type "double3" 0 45.000000000000007 0 ;
+createNode transform -n "gazebo1:pasted__polySurface15" -p "gazebo1:group1";
+	rename -uid "176F9F86-4C6B-97C7-CA77-E782C7090C19";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 180 45.000000000000014 0 ;
+	setAttr ".s" -type "double3" 1 1.1361033258723749 -1 ;
+createNode transform -n "gazebo1:polySurface18" -p "gazebo1:group1";
+	rename -uid "26CE3EE2-4DE1-BA73-2287-F3857563B8E3";
+	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
+createNode transform -n "gazebo1:polySurface19" -p "gazebo1:group1";
+	rename -uid "CA027BF5-466F-EC70-7AFF-43972D202B57";
+	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
+createNode transform -n "gazebo1:pasted__polySurface16" -p "gazebo1:group1";
+	rename -uid "1C60C923-4B33-6177-EEC4-FDBB4159592F";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 180 89.999999999999986 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1.1361033258723749 -1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface20" -p "gazebo1:group1";
+	rename -uid "3A2E3F36-4708-85B8-A911-A3BECDC570E0";
+	setAttr ".r" -type "double3" 0 135 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface21" -p "gazebo1:group1";
+	rename -uid "213FE995-4B7F-B8B5-C02E-128D7FF4D4A8";
+	setAttr ".r" -type "double3" 0 135 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:pasted__polySurface17" -p "gazebo1:group1";
+	rename -uid "67BA417E-4652-D8DF-CE64-12B179228A2F";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 0 45.000000000000014 180 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1.1361033258723749 -1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface22" -p "gazebo1:group1";
+	rename -uid "14062F30-4049-63E2-D614-8A8D7B4644C9";
+	setAttr ".r" -type "double3" 0 180 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface23" -p "gazebo1:group1";
+	rename -uid "BE2E71DD-4089-F235-E0A1-CBACB452847D";
+	setAttr ".r" -type "double3" 0 180 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:pasted__polySurface18" -p "gazebo1:group1";
+	rename -uid "9CB55A11-4DD1-7F13-EDC4-29A36DF344A0";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 0 0 180 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1.1361033258723749 -1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface24" -p "gazebo1:group1";
+	rename -uid "F4CC7623-4C6E-1BFD-326E-5EA1EED08944";
+	setAttr ".r" -type "double3" 0 225 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface25" -p "gazebo1:group1";
+	rename -uid "8CFBF63C-4D9C-23B4-5657-449078FA26D3";
+	setAttr ".r" -type "double3" 0 225 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:pasted__polySurface19" -p "gazebo1:group1";
+	rename -uid "0A0A831D-4194-83B8-20A4-0D937DD1141D";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" -4.9937649197972445e-31 -45.000000000000007 180 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1.1361033258723749 -1.0000000000000002 ;
+createNode transform -n "gazebo1:polySurface26" -p "gazebo1:group1";
+	rename -uid "D67187F8-47C0-2AEA-0D1C-2A823532CDD2";
+	setAttr ".r" -type "double3" 0 -89.999999999999986 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:polySurface27" -p "gazebo1:group1";
+	rename -uid "F353E2DB-4857-01A8-575F-F68E8E819DE2";
+	setAttr ".r" -type "double3" 0 -89.999999999999986 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1 1.0000000000000004 ;
+createNode transform -n "gazebo1:pasted__polySurface20" -p "gazebo1:group1";
+	rename -uid "A569AF97-4FE4-D53E-0C5B-D183A1FA979B";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 180 -89.999999999999986 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000007 1.1361033258723749 -1.0000000000000007 ;
+createNode transform -n "gazebo1:polySurface28" -p "gazebo1:group1";
+	rename -uid "69C753AA-42D3-2DD9-F2C7-33BAA94D573F";
+	setAttr ".r" -type "double3" 0 -44.999999999999993 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000007 1 1.0000000000000007 ;
+createNode mesh -n "gazebo1:polySurfaceShape15" -p "gazebo1:polySurface28";
+	rename -uid "2F1AE75A-4337-2B91-7390-58A8BC086329";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 8 ".iog";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[1].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[2].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[3].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[4].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[5].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[6].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".iog[7].og[0].gcl" -type "componentList" 1 "f[0:55]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.84375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 72 ".uvst[0].uvsp[0:71]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.40625 0.53180861 0.375 0.53180861 0.4375 0.3125 0.4375 0.53180861 0.46875
+		 0.3125 0.46875 0.53180861 0.5 0.3125 0.5 0.53180861 0.53125 0.3125 0.53125 0.53180861
+		 0.5625 0.3125 0.5625 0.53180861 0.59375 0.3125 0.59375 0.53180861 0.625 0.3125 0.625
+		 0.53180861 0.5 1.4901161e-08 0.61048543 0.04576458 0.5 0.15625 0.38951457 0.04576458
+		 0.34375 0.15625 0.38951457 0.26673543 0.5 0.3125 0.61048543 0.26673543 0.65625 0.15625
+		 0.60699737 0.94765157 0.5 0.99068904 0.5 0.84375 0.39300266 0.94765157 0.34868294
+		 0.84375 0.39300266 0.73984843 0.5 0.69681096 0.60699737 0.73984843 0.65131706 0.84375
+		 0.59375 0.62528491 0.625 0.62528491 0.6210537 0.69681096 0.59079027 0.69681096 0.5625
+		 0.62528491 0.56052679 0.69681096 0.53125 0.62528491 0.53026342 0.69681096 0.5 0.62528491
+		 0.5 0.69681096 0.46875 0.62528491 0.46973661 0.69681096 0.4375 0.62528491 0.43947315
+		 0.69681096 0.40625 0.62528491 0.40920973 0.69681096 0.375 0.62528491 0.37894633 0.69681096
+		 0.59375 0.55368721 0.625 0.55368721 0.5625 0.55368721 0.53125 0.55368721 0.5 0.55368721
+		 0.46875 0.55368721 0.4375 0.55368721 0.40625 0.55368721 0.375 0.55368721 0.625 0.54274791
+		 0.59375 0.54274791 0.5625 0.54274791 0.53125 0.54274791 0.5 0.54274791 0.46875 0.54274791
+		 0.4375 0.54274791 0.40625 0.54274791 0.375 0.54274791;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 50 ".vt[0:49]"  -1.0083384514 2.12819552 -2.14925146 -1.0083390474 2.12819552 -2.031162739
+		 -0.92483741 2.12819552 -1.947662 -0.80674881 2.12819552 -1.94766152 -0.72324789 2.12819552 -2.031162977
+		 -0.72324729 2.12819552 -2.1492517 -0.80674893 2.12819552 -2.23275256 -0.92483795 2.12819552 -2.23275375
+		 -1.16190052 5.34809017 -2.2128582 -1.16190171 5.34809017 -1.96755445 -0.98844481 5.34809017 -1.79409957
+		 -0.74314088 5.34809017 -1.79409826 -0.56968564 5.34809017 -1.96755528 -0.56968445 5.34809017 -2.21285892
+		 -0.74314135 5.34809017 -2.38631392 -0.98844594 5.34809017 -2.38631678 -0.86579323 2.12819552 -2.0902071
+		 -0.86579311 5.34809017 -2.090206623 -1.0083384514 4.83848333 -2.14925146 -0.92483795 4.83848333 -2.23275375
+		 -0.80674893 4.83848333 -2.23275256 -0.72324729 4.83848333 -2.1492517 -0.72324789 4.83848333 -2.031162977
+		 -0.80674881 4.83848333 -1.94766152 -0.92483741 4.83848333 -1.947662 -1.0083390474 4.83848333 -2.031162739
+		 -1.0083384514 4.18227816 -2.14925146 -0.92483795 4.18227816 -2.23275375 -0.80674893 4.18227816 -2.23275256
+		 -0.72324729 4.18227816 -2.1492517 -0.72324789 4.18227816 -2.031162977 -0.80674881 4.18227816 -1.94766152
+		 -0.92483741 4.18227816 -1.947662 -1.0083390474 4.18227816 -2.031162739 -1.0083384514 4.06431818 -2.14925146
+		 -0.92483795 4.06431818 -2.23275375 -0.80674893 4.06431818 -2.23275256 -0.72324729 4.06431818 -2.1492517
+		 -0.72324789 4.06431818 -2.031162977 -0.80674881 4.06431818 -1.94766152 -0.92483741 4.06431818 -1.947662
+		 -1.0083390474 4.06431818 -2.031162739 -1.042552948 4.12329912 -2.16342354 -0.93901008 4.12329912 -2.26696825
+		 -0.79257685 4.12329912 -2.26696706 -0.68903267 4.12329912 -2.16342378 -0.68903339 4.12329912 -2.0169909
+		 -0.79257661 4.12329912 -1.91344666 -0.93900949 4.12329912 -1.9134475 -1.042553663 4.12329912 -2.016990662;
+	setAttr -s 104 ".ed[0:103]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 34 0 1 41 0 2 40 0
+		 3 39 0 4 38 0 5 37 0 6 36 0 7 35 0 16 0 1 16 1 1 16 2 1 16 3 1 16 4 1 16 5 1 16 6 1
+		 16 7 1 8 17 1 9 17 1 10 17 1 11 17 1 12 17 1 13 17 1 14 17 1 15 17 1 18 8 0 19 15 0
+		 20 14 0 21 13 0 22 12 0 23 11 0 24 10 0 25 9 0 18 19 1 19 20 1 20 21 1 21 22 1 22 23 1
+		 23 24 1 24 25 1 25 18 1 26 18 0 27 19 0 28 20 0 29 21 0 30 22 0 31 23 0 32 24 0 33 25 0
+		 26 27 1 27 28 1 28 29 1 29 30 1 30 31 1 31 32 1 32 33 1 33 26 1 34 42 0 35 43 0 36 44 0
+		 37 45 0 38 46 0 39 47 0 40 48 0 41 49 0 34 35 1 35 36 1 36 37 1 37 38 1 38 39 1 39 40 1
+		 40 41 1 41 34 1 42 26 0 43 27 0 44 28 0 45 29 0 46 30 0 47 31 0 48 32 0 49 33 0 42 43 1
+		 43 44 1 44 45 1 45 46 1 46 47 1 47 48 1 48 49 1 49 42 1;
+	setAttr -s 56 -ch 208 ".fc[0:55]" -type "polyFaces" 
+		f 4 0 17 87 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 86 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 85 -19
+		mu 0 4 4 6 7 5
+		f 4 3 20 84 -20
+		mu 0 4 6 8 9 7
+		f 4 4 21 83 -21
+		mu 0 4 8 10 11 9
+		f 4 5 22 82 -22
+		mu 0 4 10 12 13 11
+		f 4 6 23 81 -23
+		mu 0 4 12 14 15 13
+		f 4 7 16 80 -24
+		mu 0 4 14 16 17 15
+		f 3 -1 -25 25
+		mu 0 3 18 19 20
+		f 3 -2 -26 26
+		mu 0 3 21 18 20
+		f 3 -3 -27 27
+		mu 0 3 22 21 20
+		f 3 -4 -28 28
+		mu 0 3 23 22 20
+		f 3 -5 -29 29
+		mu 0 3 24 23 20
+		f 3 -6 -30 30
+		mu 0 3 25 24 20
+		f 3 -7 -31 31
+		mu 0 3 26 25 20
+		f 3 -8 -32 24
+		mu 0 3 19 26 20
+		f 3 8 33 -33
+		mu 0 3 27 28 29
+		f 3 9 34 -34
+		mu 0 3 28 30 29
+		f 3 10 35 -35
+		mu 0 3 30 31 29
+		f 3 11 36 -36
+		mu 0 3 31 32 29
+		f 3 12 37 -37
+		mu 0 3 32 33 29
+		f 3 13 38 -38
+		mu 0 3 33 34 29
+		f 3 14 39 -39
+		mu 0 3 34 35 29
+		f 3 15 32 -40
+		mu 0 3 35 27 29
+		f 4 -49 40 -16 -42
+		mu 0 4 36 37 38 39
+		f 4 -50 41 -15 -43
+		mu 0 4 40 36 39 41
+		f 4 -51 42 -14 -44
+		mu 0 4 42 40 41 43
+		f 4 -52 43 -13 -45
+		mu 0 4 44 42 43 45
+		f 4 -53 44 -12 -46
+		mu 0 4 46 44 45 47
+		f 4 -54 45 -11 -47
+		mu 0 4 48 46 47 49
+		f 4 -55 46 -10 -48
+		mu 0 4 50 48 49 51
+		f 4 -56 47 -9 -41
+		mu 0 4 52 50 51 53
+		f 4 -65 56 48 -58
+		mu 0 4 54 55 37 36
+		f 4 -66 57 49 -59
+		mu 0 4 56 54 36 40
+		f 4 -67 58 50 -60
+		mu 0 4 57 56 40 42
+		f 4 -68 59 51 -61
+		mu 0 4 58 57 42 44
+		f 4 -69 60 52 -62
+		mu 0 4 59 58 44 46
+		f 4 -70 61 53 -63
+		mu 0 4 60 59 46 48
+		f 4 -71 62 54 -64
+		mu 0 4 61 60 48 50
+		f 4 -72 63 55 -57
+		mu 0 4 62 61 50 52
+		f 4 -81 72 96 -74
+		mu 0 4 15 17 63 64
+		f 4 -82 73 97 -75
+		mu 0 4 13 15 64 65
+		f 4 -83 74 98 -76
+		mu 0 4 11 13 65 66
+		f 4 -84 75 99 -77
+		mu 0 4 9 11 66 67
+		f 4 -85 76 100 -78
+		mu 0 4 7 9 67 68
+		f 4 -86 77 101 -79
+		mu 0 4 5 7 68 69
+		f 4 -87 78 102 -80
+		mu 0 4 2 5 69 70
+		f 4 -88 79 103 -73
+		mu 0 4 3 2 70 71
+		f 4 -97 88 64 -90
+		mu 0 4 64 63 55 54
+		f 4 -98 89 65 -91
+		mu 0 4 65 64 54 56
+		f 4 -99 90 66 -92
+		mu 0 4 66 65 56 57
+		f 4 -100 91 67 -93
+		mu 0 4 67 66 57 58
+		f 4 -101 92 68 -94
+		mu 0 4 68 67 58 59
+		f 4 -102 93 69 -95
+		mu 0 4 69 68 59 60
+		f 4 -103 94 70 -96
+		mu 0 4 70 69 60 61
+		f 4 -104 95 71 -89
+		mu 0 4 71 70 61 62;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "gazebo1:polySurface29" -p "gazebo1:group1";
+	rename -uid "76812E75-4B61-D4BB-6850-589CA63CD126";
+	setAttr ".r" -type "double3" 0 -44.999999999999993 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000007 1 1.0000000000000007 ;
+createNode transform -n "gazebo1:pasted__polySurface21" -p "gazebo1:group1";
+	rename -uid "2FA53062-40C2-6D0A-F65E-53A1C0F18817";
+	setAttr ".t" -type "double3" 0 8.2272497031495107 0 ;
+	setAttr ".r" -type "double3" 180 -45.000000000000007 -4.9937649197972445e-31 ;
+	setAttr ".s" -type "double3" 1.0000000000000007 1.1361033258723749 -1.0000000000000007 ;
+createNode mesh -n "gazebo1:polySurfaceShape14" -p "gazebo1:pasted__polySurface21";
+	rename -uid "D978FFBB-4CC5-AE2E-69A4-C6809A74C9A9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 8 ".iog";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[1].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[2].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[3].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[4].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[5].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[6].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".iog[7].og[0].gcl" -type "componentList" 1 "f[0:74]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 2 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 0;
+	setAttr ".gtag[1].gtagnm" -type "string" "sides";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 0;
+	setAttr ".pv" -type "double2" 0.53815148025751114 0.27910876274108887 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 154 ".uvst[0].uvsp[0:153]" -type "float2" 0.043703768 0.043703731
+		 0.043702994 0.08464919 0.099027753 0.12837122 0 0.043708198 0.45891887 0.12835638
+		 0.61602896 0.12830178 0.62431663 0.084661551 0.62434584 0.043741435 0.099092305 0.52884912
+		 0.040945411 3.9581209e-09 0.14400719 0.0437061 0.10178635 0.04370448 2.2545457e-05
+		 0.82063615 0.18622783 0.043707758 0.92333615 2.0936131e-06 0.22844841 0.043709353
+		 0.80157739 0.73618144 0.27066892 0.043710817 0.88111675 2.2798777e-06 0.31288925
+		 0.043712128 0.79667729 0.40049183 0.35510927 0.043713018 0.92460799 0.042220622 0.39732873
+		 0.04371348 0.59952086 0.6541723 0.43954676 0.043713935 0.62485218 0.042223558 0.48176134
+		 0.043718081 0.19843929 0.65419537 0.5239675 0.04374266 0.92460799 0.084442727 0.56622255
+		 0.043665908 0.10178516 0.084649883 6.9141388e-06 0.042227481 0.56621164 0.084702179
+		 0.55794662 0.12832198 0.52397907 0.084624864 0.48176348 0.084650621 0.439547 0.084658451
+		 0.39732835 0.084660031 0.35510844 0.084659494 0.31288803 0.084658161 0.27066743 0.084656641
+		 0.22844683 0.084654965 0.1862262 0.084653266 0.14400561 0.084651574 0.96555376 0.042222388
+		 0.19845441 0.57102937 0.66579461 3.7252903e-09 0.59951866 0.5710063 0.96555531 1.7657876e-06
+		 0.71351135 0.40048271 0.84016889 0.042220615 0.80156809 0.81934744 0.88238841 0.042220578
+		 7.590279e-06 0.73747015 0.041009963 0.52885842 0.040945411 0.1283806 0.40049282 0.77834362
+		 0.40050042 0.82056421 0.40109488 0.7783584 0.4010995 0.73613781 0.75450039 9.2983246e-06
+		 0.79672098 1.3887882e-05 0.99999762 0.61194104 0.99999869 0.65416163 0.59892482 0.61204755
+		 0.59891707 0.65426809 0.51714039 0.52881402 0.45905805 0.52883428 0.41811267 0.52884865
+		 0.5580858 0.52880001 0.59890985 0.69521356 0.59893239 0.57110214 1 0.69510704 0.99999666
+		 0.57099563 0.83766639 1.8179417e-05 0.71355492 4.6491623e-06 0.40110376 0.6951924
+		 0.40109026 0.81930375 0.40050802 0.86150956 0.40048566 0.73739821 6.455183e-05 0.52886504
+		 0.14003772 0.52884251 0.41797346 0.12837063 0.6680184 0.084700219 0.62424695 7.705437e-05
+		 0.61616814 0.52877986 0.51700121 0.12833619 0.56619531 0.12817866 0.10178848 3.1739473e-06
+		 0.040952325 0.0422206 0.10178322 0.12835103 0.13997316 0.12836444 0.043700781 0.12834814
+		 0.19805545 0.12835509 0.14400388 0.12835281 0.18622456 0.12835452 0.22844529 0.12835647
+		 0.35510933 0.1283617 0.39733258 0.12836267 0.43955863 0.12836036 0.48179036 0.12834561
+		 0.52403039 0.12828575 0.96555334 0.08444301 0.56621397 0.000190828 0.52402592 7.4830139e-05
+		 0.481787 2.7160859e-05 0.43955764 1.4892314e-05 0.3973338 1.2091594e-05 0.27067071
+		 9.4131101e-06 0.22845016 7.8578014e-06 0.18622959 6.5283384e-06 0.14400901 4.9250666e-06
+		 0.92333382 0.042222679 0 0.69524956 0.8811143 0.04222288 0.8015638 0.86156803 0.92460996
+		 7.4505806e-09 0.6712907 0.40047807 0.6248492 2.9876828e-06 0.59951752 0.52878571
+		 0.92460841 0.042222101 0.19846207 0.52880877 1.4955178e-05 0.77841556 0 6.8844529e-06
+		 0.80157262 0.77840203 0.88239074 3.7252903e-09 0.3128913 1.045526e-05 0.31288743
+		 0.12835999 0.59951973 0.61195171 0.9655534 0.042222373 0.19844694 0.61197478 0.66579753
+		 0.0422206 2.9897317e-05 0.86158156 0.40047807 0.69517761 0.8015818 0.69523603 0.40108564
+		 0.86152434 0.8376227 0.40049624 0.67133445 0 0.59952193 0.69511771 0.99999553 0.52877504
+		 0.19843185 0.69514078 0.59894007 0.52888155 0.66804665 0.043762516 0.62420517 0.12832083
+		 0.7544567 0.40048724 0.35511214 1.1253403e-05 0.84017134 7.4505806e-09 0.27066618
+		 0.12835808 0.043706153 2.5611371e-09 4.1741878e-06 0.084653631 0.19812 0.52883315
+		 0 0.12838699;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 84 ".vt[0:83]"  -0.80394953 4.26532984 -2.14935684 -0.80394989 4.26534176 -2.035961628
+		 -0.80394953 5.34809017 -2.14935684 -0.80394989 5.34809065 -2.035961628 0.8039543 5.34809017 -2.14935684
+		 0.80395395 5.34809065 -2.035961628 0.8039543 4.26533604 -2.14935684 0.80395395 4.26533556 -2.035961628
+		 0.64309961 5.34809017 -2.14935684 0.52617282 5.34809017 -2.14935684 0.40924603 5.34809017 -2.14935684
+		 0.2923193 5.34809017 -2.14935684 0.17539254 5.34809017 -2.14935684 0.05846576 5.34809017 -2.14935684
+		 -0.058461003 5.34809017 -2.14935684 -0.17538777 5.34809017 -2.14935684 -0.29231453 5.34809017 -2.14935684
+		 -0.40924129 5.34809017 -2.14935684 -0.52616805 5.34809017 -2.14935684 -0.64309484 5.34809017 -2.14935684
+		 -0.64309484 4.26533604 -2.14935684 -0.52616805 4.26533604 -2.14935684 -0.40924129 4.26533604 -2.14935684
+		 -0.29231453 4.26533604 -2.14935684 -0.17538777 4.26533604 -2.14935684 -0.058461003 4.26533556 -2.14935684
+		 0.05846576 4.26533556 -2.14935684 0.17539254 4.26533556 -2.14935684 0.2923193 4.26533604 -2.14935684
+		 0.40924603 4.26533604 -2.14935684 0.52617282 4.26533604 -2.14935684 0.64309961 4.26602888 -2.14935684
+		 -0.6430952 4.26533604 -2.035961628 -0.52616841 4.26533604 -2.035961628 -0.40924162 4.26533604 -2.035961628
+		 -0.29231489 4.26533604 -2.035961628 -0.17538813 4.26533604 -2.035961628 -0.058461364 4.26533556 -2.035961628
+		 0.058465399 4.26533556 -2.035961628 0.17539218 4.26533556 -2.035961628 0.29231894 4.26533604 -2.035961628
+		 0.4092457 4.26533604 -2.035961628 0.52617246 4.26533604 -2.035961628 0.64309925 4.26602888 -2.035961628
+		 -0.6430952 5.34809065 -2.035961628 -0.52616841 5.34809065 -2.035961628 -0.40924162 5.34809065 -2.035961628
+		 -0.29231489 5.34809065 -2.035961628 -0.17538813 5.34809065 -2.035961628 -0.058461364 5.34809065 -2.035961628
+		 0.058465399 5.34809065 -2.035961628 0.17539218 5.34809065 -2.035961628 0.29231894 5.34809065 -2.035961628
+		 0.4092457 5.34809065 -2.035961628 0.52617246 5.34809065 -2.035961628 0.64309925 5.34809065 -2.035961628
+		 -0.80394948 4.37186432 -2.14935684 -0.64309484 4.37186432 -2.14935684 -0.52616805 4.37186432 -2.14935684
+		 -0.40924129 4.37186432 -2.14935684 -0.29231453 4.3718648 -2.14935684 -0.17538777 4.37186432 -2.14935684
+		 -0.058461003 4.37186432 -2.14935684 0.05846576 4.37186432 -2.14935684 0.17539254 4.37186432 -2.14935684
+		 0.2923193 4.37186432 -2.14935684 0.40924603 4.37186432 -2.14935684 0.52617282 4.37186432 -2.14935684
+		 0.64309961 4.37186432 -2.14935684 0.8039543 4.37186432 -2.14935684 0.80395395 4.37186432 -2.035961628
+		 0.64309925 4.37186432 -2.035961628 0.52617246 4.37186432 -2.035961628 0.4092457 4.37186432 -2.035961628
+		 0.29231891 4.37186432 -2.035961628 0.17539217 4.37186432 -2.035961628 0.058465395 4.37186432 -2.035961628
+		 -0.058461357 4.37186432 -2.035961628 -0.17538811 4.37186432 -2.035961628 -0.29231489 4.3718648 -2.035961628
+		 -0.40924162 4.37186432 -2.035961628 -0.52616841 4.37186432 -2.035961628 -0.6430952 4.37186432 -2.035961628
+		 -0.80394989 4.37186432 -2.035961628;
+	setAttr -s 164 ".ed[0:163]"  0 1 0 2 3 0 4 5 0 6 7 0 0 56 0 1 83 0 4 69 0
+		 5 70 0 18 58 0 21 20 0 20 57 1 18 17 0 17 59 0 22 21 0 16 60 0 23 22 0 16 15 0 15 61 0
+		 24 23 0 14 62 0 25 24 0 14 13 0 13 63 0 26 25 0 12 64 0 27 26 0 12 11 0 11 65 0 28 27 0
+		 10 66 0 29 28 0 10 9 0 9 67 0 30 29 0 8 68 0 31 30 0 33 32 0 32 20 1 34 33 0 35 34 0
+		 36 35 0 37 36 0 38 37 0 39 38 0 40 39 0 41 40 0 42 41 0 31 43 1 43 42 0 44 82 0 46 45 0
+		 48 47 0 50 49 0 52 51 0 54 53 0 43 71 1 3 44 0 19 2 0 32 1 0 0 20 0 6 31 0 8 4 0
+		 7 43 0 5 55 0 30 42 1 29 41 1 28 40 1 27 39 1 26 38 1 25 37 1 24 36 1 23 35 1 22 34 1
+		 21 33 1 42 72 1 41 73 1 40 74 1 39 75 1 38 76 1 37 77 1 36 78 1 35 79 1 34 80 1 33 81 1
+		 9 54 0 56 2 0 57 19 0 58 21 1 59 22 1 60 23 1 61 24 1 62 25 1 63 26 1 64 27 1 65 28 1
+		 66 29 1 67 30 1 68 31 1 69 6 0 70 7 0 71 55 0 72 54 0 73 53 0 74 52 0 75 51 0 76 50 0
+		 77 49 0 78 48 0 79 47 0 80 46 0 81 45 0 82 32 1 83 3 0 56 57 1 57 58 0 58 59 1 59 60 0
+		 60 61 1 61 62 0 62 63 1 63 64 0 64 65 1 65 66 0 66 67 1 67 68 0 68 69 1 69 70 1 70 71 1
+		 71 72 0 72 73 1 73 74 0 74 75 1 75 76 0 76 77 1 77 78 0 78 79 1 79 80 0 80 81 1 81 82 0
+		 82 83 1 83 56 1 67 72 0 68 71 0 8 55 0 65 74 0 66 73 0 10 53 0 11 52 0 64 75 0 12 51 0
+		 63 76 0 13 50 0 15 48 0 61 78 0 62 77 0 14 49 0 59 80 0 60 79 0 16 47 0 17 46 0 58 81 0
+		 18 45 0 57 82 0 44 19 0;
+	setAttr -s 75 -ch 300 ".fc[0:74]" -type "polyFaces" 
+		f 4 0 5 140 -5
+		mu 0 4 0 1 151 3
+		f 4 126 99 -4 -99
+		mu 0 4 144 85 6 7
+		f 4 114 87 9 10
+		mu 0 4 90 113 10 11
+		f 4 115 88 13 -88
+		mu 0 4 113 112 13 10
+		f 4 116 89 15 -89
+		mu 0 4 112 111 15 13
+		f 4 117 90 18 -90
+		mu 0 4 111 110 17 15
+		f 4 118 91 20 -91
+		mu 0 4 110 128 19 17
+		f 4 119 92 23 -92
+		mu 0 4 128 147 21 19
+		f 4 120 93 25 -93
+		mu 0 4 147 109 23 21
+		f 4 121 94 28 -94
+		mu 0 4 109 108 25 23
+		f 4 122 95 30 -95
+		mu 0 4 108 107 27 25
+		f 4 123 96 33 -96
+		mu 0 4 107 106 29 27
+		f 4 124 97 35 -97
+		mu 0 4 106 105 31 29
+		f 4 -38 58 -1 59
+		mu 0 4 11 32 1 0
+		f 4 -59 -112 139 -6
+		mu 0 4 1 32 92 94
+		f 4 113 -11 -60 4
+		mu 0 4 150 90 11 0
+		f 4 60 -98 125 98
+		mu 0 4 7 31 105 86
+		f 4 3 62 -48 -61
+		mu 0 4 7 6 34 31
+		f 4 127 -56 -63 -100
+		mu 0 4 145 89 34 6
+		f 4 -36 47 48 -65
+		mu 0 4 29 31 34 36
+		f 4 -34 64 46 -66
+		mu 0 4 27 29 36 37
+		f 4 -31 65 45 -67
+		mu 0 4 25 27 37 38
+		f 4 -29 66 44 -68
+		mu 0 4 23 25 38 39
+		f 4 -26 67 43 -69
+		mu 0 4 21 23 39 40
+		f 4 -24 68 42 -70
+		mu 0 4 19 21 40 41
+		f 4 -21 69 41 -71
+		mu 0 4 17 19 41 42
+		f 4 -19 70 40 -72
+		mu 0 4 15 17 42 43
+		f 4 -16 71 39 -73
+		mu 0 4 13 15 43 44
+		f 4 -10 73 36 37
+		mu 0 4 11 10 45 32
+		f 4 -14 72 38 -74
+		mu 0 4 10 13 44 45
+		f 4 -49 55 128 -75
+		mu 0 4 36 34 89 103
+		f 4 -47 74 129 -76
+		mu 0 4 37 36 103 102
+		f 4 -46 75 130 -77
+		mu 0 4 38 37 102 101
+		f 4 -45 76 131 -78
+		mu 0 4 39 38 101 100
+		f 4 -44 77 132 -79
+		mu 0 4 40 39 100 99
+		f 4 -43 78 133 -80
+		mu 0 4 41 40 99 129
+		f 4 -42 79 134 -81
+		mu 0 4 42 41 129 149
+		f 4 -41 80 135 -82
+		mu 0 4 43 42 149 98
+		f 4 -40 81 136 -83
+		mu 0 4 44 43 98 97
+		f 4 -37 83 138 111
+		mu 0 4 32 45 96 92
+		f 4 -39 82 137 -84
+		mu 0 4 45 44 97 96
+		f 4 -87 -114 85 -58
+		mu 0 4 2 8 56 57
+		f 4 11 12 -116 -9
+		mu 0 4 58 59 12 124
+		f 4 16 17 -118 -15
+		mu 0 4 60 61 16 126
+		f 4 21 22 -120 -20
+		mu 0 4 62 63 20 146
+		f 4 26 27 -122 -25
+		mu 0 4 64 65 24 130
+		f 4 31 32 -124 -30
+		mu 0 4 66 67 28 132
+		f 4 -126 -35 61 6
+		mu 0 4 4 88 68 69
+		f 4 2 7 -127 -7
+		mu 0 4 69 70 84 4
+		f 4 -101 -128 -8 63
+		mu 0 4 71 35 5 87
+		f 4 -130 101 54 -103
+		mu 0 4 47 123 143 73
+		f 4 -132 103 53 -105
+		mu 0 4 49 121 141 75
+		f 4 -134 105 52 -107
+		mu 0 4 51 119 139 77
+		f 4 -136 107 51 -109
+		mu 0 4 53 117 137 79
+		f 4 -138 109 50 -111
+		mu 0 4 55 115 135 81
+		f 4 -140 -50 -57 -113
+		mu 0 4 152 83 93 95
+		f 4 -141 112 -2 -86
+		mu 0 4 56 82 153 57
+		f 4 -125 141 -129 -143
+		mu 0 4 30 122 46 104
+		f 4 34 142 100 -144
+		mu 0 4 68 88 35 71
+		f 4 -123 144 -131 -146
+		mu 0 4 26 120 48 133
+		f 4 29 145 102 -147
+		mu 0 4 66 132 47 73
+		f 4 -28 147 -104 -145
+		mu 0 4 24 65 74 140
+		f 4 24 148 104 -150
+		mu 0 4 64 130 49 75
+		f 4 -121 150 -133 -149
+		mu 0 4 22 118 50 131
+		f 4 -23 151 -106 -151
+		mu 0 4 20 63 76 138
+		f 4 -18 152 -108 -154
+		mu 0 4 16 61 78 136
+		f 4 -119 153 -135 -155
+		mu 0 4 18 116 52 148
+		f 4 19 154 106 -156
+		mu 0 4 62 146 51 77
+		f 4 -117 156 -137 -158
+		mu 0 4 14 114 54 127
+		f 4 14 157 108 -159
+		mu 0 4 60 126 53 79
+		f 4 -13 159 -110 -157
+		mu 0 4 12 59 80 134
+		f 4 8 160 110 -162
+		mu 0 4 58 124 55 81
+		f 4 -115 162 -139 -161
+		mu 0 4 9 91 33 125
+		f 4 49 -163 86 -164
+		mu 0 4 93 83 8 2
+		f 4 -33 84 -102 -142
+		mu 0 4 28 67 72 142;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube1";
+	rename -uid "F9872924-4D8A-B734-6F2A-A68E3D04EDCB";
+	setAttr ".t" -type "double3" -6.380243736756646 6.7647705078124973 -8.8794077383466075 ;
+	setAttr ".s" -type "double3" 5.6191197203550711 11.529540906784421 2.5105308512027702 ;
+	setAttr ".rp" -type "double3" 5.773159728050814e-14 -5.7647705078124964 9.2148511043887993e-15 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000472006922 0 ;
+	setAttr ".spt" -type "double3" 5.773159728050814e-14 -5.2647705030924428 9.2148511043887993e-15 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "B558790E-4407-ACC9-5D9C-DF899721E772";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube2";
+	rename -uid "30C4813C-4486-ECA4-2D6F-64A780AA15D8";
+	setAttr ".t" -type "double3" -1.1534485586582024 4.0852197656076381 -8.8794077383466075 ;
+	setAttr ".s" -type "double3" 5.6191197203550711 6.1704392327951574 2.5105308512027702 ;
+	setAttr ".rp" -type "double3" 0 -3.0852197656076368 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000002418142864 0 ;
+	setAttr ".spt" -type "double3" 0 -2.5852197414262079 0 ;
+createNode mesh -n "pCubeShape2" -p "pCube2";
+	rename -uid "25CEFDBB-43A8-F9F5-6A99-7FB317C22D84";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube3";
+	rename -uid "76F4C467-42A0-5F85-0860-CC9B738040D2";
+	setAttr ".t" -type "double3" 1.872590754977737 5.9363512634001214 -8.8794077383466075 ;
+	setAttr ".s" -type "double3" 2.9344290538938469 9.8727029564383084 2.5105308512027702 ;
+	setAttr ".rp" -type "double3" 0 -4.9363512634001214 0 ;
+	setAttr ".sp" -type "double3" 0 -0.4999999782411122 0 ;
+	setAttr ".spt" -type "double3" 0 -4.4363512851589695 0 ;
+createNode mesh -n "pCubeShape3" -p "pCube3";
+	rename -uid "B4AF22BB-405E-88A3-86DE-06A7A06FA33E";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube4";
+	rename -uid "CD4C7AD1-408A-CD4B-FB3C-73AB8F622A84";
+	setAttr ".t" -type "double3" 5.1737245516714898 7.3711841775644524 -8.8794077383466075 ;
+	setAttr ".s" -type "double3" 4.2386198093187701 12.742368725229355 2.5105308512027702 ;
+	setAttr ".rp" -type "double3" 0 -6.3711841775644524 0 ;
+	setAttr ".sp" -type "double3" 0 -0.49999998547756469 0 ;
+	setAttr ".spt" -type "double3" 0 -5.8711841920868952 0 ;
+createNode mesh -n "pCubeShape4" -p "pCube4";
+	rename -uid "D73A52CC-4F3C-EEA3-91F8-2A8CA9C09DEF";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube5";
+	rename -uid "A03B0615-41F2-4A5D-AF18-83A51C00F317";
+	setAttr ".t" -type "double3" 8.0425670178458244 6.3022415109274696 -8.8794077383466075 ;
+	setAttr ".s" -type "double3" 1.8838309093540779 10.604482274773776 2.5105308512027702 ;
+	setAttr ".rp" -type "double3" 0 -5.3022415109274696 0 ;
+	setAttr ".sp" -type "double3" 0 -0.5000000352247802 0 ;
+	setAttr ".spt" -type "double3" 0 -4.8022414757026928 0 ;
+createNode mesh -n "pCubeShape5" -p "pCube5";
+	rename -uid "70CAE11E-432A-655F-389D-518697BBCED1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface17" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface19" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface21" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface23" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface25" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface27" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10" "gazebo1:polySurface29" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface16" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface18" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface20" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface22" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface24" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface26" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11" "gazebo1:polySurface28" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface15" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface16" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface17" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface18" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface19" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface20" ;
+parent -s -nc -r -add "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14" "gazebo1:pasted__polySurface21" ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "C4733006-44DE-5AC0-C9FD-C1A2C21C96A3";
 	setAttr -s 2 ".lnk";
@@ -809,9 +2032,6 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "32F74EC5-4F99-0357-DA66-B798D2710DCC";
 	setAttr ".g" yes;
-createNode polyCube -n "polyCube1";
-	rename -uid "D48EF327-43F5-AA1B-B0F0-64B670F0FE40";
-	setAttr ".cuv" 4;
 createNode polyCone -n "polyCone1";
 	rename -uid "B7CA119A-4CC4-7962-D2E1-DDB00646EAA8";
 	setAttr ".sa" 16;
@@ -852,17 +2072,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 572\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1150\n            -height 705\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 572\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1150\n            -height 705\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 571\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
 		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n"
 		+ "            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
@@ -888,9 +2108,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1150\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1150\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|front\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1150\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|front\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1150\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1022,10 +2242,6 @@ createNode polySplit -n "polySplit6";
 		-2147483570 -2147483569 -2147483576;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polyUnite -n "polyUnite1";
-	rename -uid "BF105EF2-48B2-6496-BF40-B2A1AC5A7EEC";
-	setAttr -s 9 ".ip";
-	setAttr -s 9 ".im";
 createNode groupId -n "groupId1";
 	rename -uid "8354DC48-4DD7-B3C4-24C3-AB9D089475D7";
 	setAttr ".ihi" 0;
@@ -1116,13 +2332,6 @@ createNode groupId -n "groupId18";
 createNode groupId -n "groupId19";
 	rename -uid "05095680-4CB1-1905-8B10-048F430C179A";
 	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts10";
-	rename -uid "B5A24883-411F-CC32-0E30-0FB2946DF666";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:456]";
-createNode groupId -n "groupId20";
-	rename -uid "838A0A74-4078-3B1C-2E65-059DBF7D8F85";
-	setAttr ".ihi" 0;
 createNode groupId -n "groupId21";
 	rename -uid "8F42FC10-4A16-4D12-0D60-3DA1D8A3939D";
 	setAttr ".ihi" 0;
@@ -1153,6 +2362,1258 @@ createNode groupId -n "groupId24";
 createNode groupId -n "groupId2";
 	rename -uid "ABFED2D8-4583-E541-8D14-98AF3B851B59";
 	setAttr ".ihi" 0;
+createNode nodeGraphEditorInfo -n "gazebo:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "02AAFE12-4635-52C4-6BEC-E1A56EEF1380";
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -802.38092049719921 ;
+	setAttr ".tgi[0].vh" -type "double2" 604.76188073082676 44.047617297323995 ;
+createNode groupId -n "gazebo:groupId71";
+	rename -uid "8DC7D1E5-4C64-6472-3F9C-CBA90ECF19DD";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId75";
+	rename -uid "F5A0E713-4769-9634-FD48-D8A2C7440B93";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId79";
+	rename -uid "EA6F7225-4473-BBAE-3168-4B91130C195A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId85";
+	rename -uid "B5DC2D3D-4DB7-3142-2883-2582CE21D8CD";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId86";
+	rename -uid "014C7655-4B5B-B77A-00F5-FA9B76F85735";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId87";
+	rename -uid "0F5CEFBD-4D52-5559-5481-4A91CE1C4F01";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId88";
+	rename -uid "A46A104A-4D8E-7DD1-10A5-E3BE70F9E59C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId89";
+	rename -uid "CFB95520-42CA-B20A-66CF-06BDC3BB6612";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId92";
+	rename -uid "350ED803-4F95-DED1-06AC-ED8AF3B7A3E7";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId93";
+	rename -uid "4AE4723D-4BB5-83AD-EDEE-6DBF81E43EE5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId94";
+	rename -uid "A91F3801-45D0-B437-E5F6-D08FF8E9BB24";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId95";
+	rename -uid "50C515AA-4DD1-E172-158D-5B94EDE965D7";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId96";
+	rename -uid "F061CBC8-4F7F-A827-3797-74AF29A8CD98";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId98";
+	rename -uid "C33AFC94-46A3-DF51-7D6A-FFB96ECE8D26";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId99";
+	rename -uid "10D46479-48AB-67D1-6504-7487AD794A5C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId100";
+	rename -uid "EB68FF0B-49B4-241B-2BA7-129784CE6107";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId101";
+	rename -uid "FCA2DCF7-4ADE-5BD6-05D5-BD9C09649BAB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId102";
+	rename -uid "AFCCED37-4914-D7AD-9195-36BF1750EED1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId103";
+	rename -uid "FDA7E067-44CE-EE4A-52E7-01AE8899F6E9";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId104";
+	rename -uid "53E8A2C5-4203-0772-36F2-7EB0FC0F3DD1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId105";
+	rename -uid "2A3D76C3-45B9-1512-00DF-F2BCC1456002";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId106";
+	rename -uid "8A8C9D78-46A5-31E7-50DA-77A2F635DCDA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId107";
+	rename -uid "4166D4FE-4FB0-6297-5E24-DBA13F6DD1FE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId108";
+	rename -uid "6F348F02-4A24-2558-6E74-1A95C51E848A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId109";
+	rename -uid "0684FC60-4E5B-7C80-2C6E-CDA3791CBF16";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId110";
+	rename -uid "B76EC132-48D9-199F-86D9-92A8213FF3FB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId111";
+	rename -uid "4E3132EC-40BA-5B9B-FDCC-FDA7114A3498";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId112";
+	rename -uid "D17968A3-4A6B-BD9F-C96C-849E87263B45";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId113";
+	rename -uid "74ECE7A7-4C82-7F33-84FD-938CE2E3C1DB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId114";
+	rename -uid "56218AB2-49AD-5459-DB20-629BDFF3690F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId115";
+	rename -uid "110E6BCC-4733-46CA-F2EC-ABA75B91E851";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId116";
+	rename -uid "87F8A251-4336-4B4C-4852-07B9D8E00B0E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId117";
+	rename -uid "CEAD32B6-4CE2-1927-E245-7BB8D9800998";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId118";
+	rename -uid "936ADAB2-4EA2-3434-940A-36B425C55451";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId119";
+	rename -uid "286C58B5-4926-C554-9DDC-708479736D2D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId120";
+	rename -uid "B0DF5624-47B1-2EF5-F486-48B9F38DDEC1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId121";
+	rename -uid "2E687C45-4247-6DD4-CFA6-6FBB4972060F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId122";
+	rename -uid "83504363-48F5-FE86-FD48-F4994845088A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId123";
+	rename -uid "9393A353-4212-3A24-A7CC-58A0C10B182E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId124";
+	rename -uid "CCFB9F8B-406A-4869-7E50-6586E82C31AD";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId125";
+	rename -uid "2C83FABB-4207-F213-07BA-D8AA56050411";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId126";
+	rename -uid "4C423CC1-42B1-72F3-00A3-1898919DA3E2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId127";
+	rename -uid "CA2D126A-47FE-4F2C-429A-A59C9E371D21";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId128";
+	rename -uid "92197B55-4F41-4C18-59A1-178B9F241839";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId129";
+	rename -uid "D4DC8CDE-472B-4090-C149-13950594966E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId130";
+	rename -uid "6DDAF468-40C0-1C44-3A24-51AA69CE4CCE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId131";
+	rename -uid "B96881A4-47D1-F347-1606-44A8916F9C24";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId132";
+	rename -uid "C59F3EF2-44D4-0973-EDFA-2AA15B10FD7A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId133";
+	rename -uid "E4102768-4685-65CD-035E-F4BBFAC5098A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId134";
+	rename -uid "A96770C8-4C35-749E-C8FA-B69BFFA56FFA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId135";
+	rename -uid "5C53B80B-4EB7-7AEE-4861-ABB055667FA1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId136";
+	rename -uid "6071F6A4-44C3-9FE6-B5FC-CF85B714B7D1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId137";
+	rename -uid "0B6D21E7-4107-AB15-8CBD-F89733E6AFE4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId138";
+	rename -uid "C95B39E2-47B2-3DB8-C484-91833D72001B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId139";
+	rename -uid "991AE0F0-4B66-9A25-C83B-22ACE73A665A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId140";
+	rename -uid "65FE396B-42AD-1625-76F5-0AB150BAFD86";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId141";
+	rename -uid "92C535A0-4F3E-2CA5-00C6-10A691B5C066";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId142";
+	rename -uid "017036CD-4FF4-0876-A14E-10B076433A7A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId143";
+	rename -uid "29185E7A-4BDD-C7EC-29D5-D790D236B783";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId144";
+	rename -uid "0F815B64-4F75-5814-9C8A-8CB1C9FA0C97";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId145";
+	rename -uid "2DF9CDE3-4326-5F04-0A9D-F8BEFCC27EA2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId146";
+	rename -uid "8C567B2C-4836-841F-FB30-DDBFEC2BC496";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId147";
+	rename -uid "A16592AC-49A4-B4B6-2C0A-7F9D9537543E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId148";
+	rename -uid "1F943091-469E-7872-212E-39AEA2FD31BB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId149";
+	rename -uid "774BFAAC-4CE0-BE1A-5E32-28B118BE7465";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId150";
+	rename -uid "34435295-45B7-34B7-A476-968626D359B3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId151";
+	rename -uid "A6D5D564-42DA-32D7-EE02-868011D87127";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId152";
+	rename -uid "C1B1096D-4912-55C8-A41A-9AA558120A3C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId153";
+	rename -uid "96EE1531-4D9A-3E39-801A-3BB2DE082FE0";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId154";
+	rename -uid "6B810DF0-4370-6CD1-7784-4296AD814093";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId155";
+	rename -uid "FEA9692B-4329-7451-AE8E-83B5D72A19C0";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId156";
+	rename -uid "D5F3A4B8-41EE-A4DA-BE16-948770E60547";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId157";
+	rename -uid "F819BDCB-4FB5-350D-DFD8-3DB046DE774A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId158";
+	rename -uid "6A3586D8-4627-2111-E9A0-49B1ADF3B67D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId159";
+	rename -uid "A534C6A2-4812-6B88-A8B2-1ABCCF287DEA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId160";
+	rename -uid "5DD9463D-40AE-F0D7-B1C5-DFBB20A6BEE3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId161";
+	rename -uid "33EF5254-4C80-98C3-F199-93815385D41B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId162";
+	rename -uid "49E55E46-4231-AC9A-DFF5-F3A1CE0AE2F4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId163";
+	rename -uid "CFA18A73-41AA-1415-16FF-7398CED4C66C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId164";
+	rename -uid "32F3F76D-446A-0197-B47E-25BABF654CB1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId165";
+	rename -uid "53B15009-4DEF-139B-DDA8-5BAEDDA9DB9D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId166";
+	rename -uid "C295F254-4E4F-69F2-138C-1CBB9DEFD044";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId167";
+	rename -uid "CBE50F2E-4C03-EC43-F8BB-E0BCAC5D1528";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId168";
+	rename -uid "7746EFE4-4839-5878-0303-D7802A9C49D4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId169";
+	rename -uid "41C10BDC-41FF-A26D-9FF2-278B2C0B401D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId170";
+	rename -uid "F4583ECA-4E1C-B28C-83C9-D1863014F44A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId171";
+	rename -uid "0762F7B5-4AA4-6C52-7100-70B89E9916C5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId172";
+	rename -uid "00B02F96-48A1-327E-62EB-E39FF435AD69";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId173";
+	rename -uid "501B87F3-4E4A-CD39-BD73-E5B16FAA1D20";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId174";
+	rename -uid "A96C31DA-4548-E75F-08FC-8A9A9DBBCA81";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId175";
+	rename -uid "CF91537F-4883-AEDE-692D-0292DCA94D2D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId176";
+	rename -uid "F7FB251F-40F2-E01A-2160-92952AFCBC3C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId177";
+	rename -uid "1DD167B7-4A2D-621B-48AB-FD84CEADCF5A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId178";
+	rename -uid "8C0ADE7A-4AB9-0670-CD73-FE813A486F08";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId179";
+	rename -uid "DD8C015D-4BC8-D949-84E5-C5AFF02E5BBE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId180";
+	rename -uid "E2ACA982-4E33-EFD9-258D-35978516559D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId181";
+	rename -uid "B6F2FDE2-4FB5-F7B0-4F92-D0BAD494C316";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId182";
+	rename -uid "9F5C5769-4CA0-DEB4-39D7-A388F355F462";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId183";
+	rename -uid "325E4B4E-4A83-4DA4-D3D5-E795C1EFDD4A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId184";
+	rename -uid "BBA4F0A0-435D-C638-C75B-E2B5DE9CC26B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId185";
+	rename -uid "F6FAC222-46C8-6882-F8BC-7483CE5F0566";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId186";
+	rename -uid "BFE3B666-4FE8-366C-88A5-3BAED41487AF";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId187";
+	rename -uid "1726F7C3-4B73-BA78-8527-8C8040B4DF2D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId188";
+	rename -uid "E8A1981E-4758-2C58-E337-53B0A52BD5EE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId189";
+	rename -uid "BC82B5AD-470B-7FD0-D2ED-C4AA12FA9D93";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId190";
+	rename -uid "462D7094-4087-46FA-4A36-E282A41F33AE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId191";
+	rename -uid "2C0DCDCC-4BDF-545C-5E12-9296B6530DDE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId192";
+	rename -uid "C1E13990-4791-117E-EAB0-01897C4F9FE5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId193";
+	rename -uid "60B5B1FC-4371-010D-6B10-A1920D2FD9E9";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId194";
+	rename -uid "C1999F01-46DB-0F35-DA7C-059BE6618CA4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId195";
+	rename -uid "645E7A2B-4F69-6060-D0EC-5CA4552BF1BE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId196";
+	rename -uid "5D97096F-4509-9E12-62D8-848D7CB78277";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId197";
+	rename -uid "49DDE8CC-4F26-FF98-D36D-CD8817787219";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId198";
+	rename -uid "77427901-445F-6919-E7EC-4FB5F8B7729C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId199";
+	rename -uid "F0711842-491E-B91D-F116-478163F52761";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId200";
+	rename -uid "8D4C4C79-4165-C621-2270-578F492CB279";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId201";
+	rename -uid "04E6F09E-4CA4-38F0-1888-B6BC721C8470";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId202";
+	rename -uid "CA3B1DF9-4DBE-8736-90A4-53BD5BEDC3DB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId203";
+	rename -uid "51B2E476-4131-AA09-93C4-55B9077ACCF3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId204";
+	rename -uid "6323137F-4896-2D99-E940-95A3BB25B881";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId205";
+	rename -uid "F603F699-4073-342E-F258-BCA80AFCE07F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId206";
+	rename -uid "64551C8D-43D3-ABD4-965E-C0B526FC3D4D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId207";
+	rename -uid "110CAD84-4356-9A08-2C48-66915B8924B5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId208";
+	rename -uid "6B7F4F25-42BF-A732-81B2-06BD3C01CA70";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId209";
+	rename -uid "2D7229D0-4B9B-1AD4-8CAD-2ABDA28713AE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId210";
+	rename -uid "1883C2D7-4771-CF88-51ED-41AA2AF06BCD";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId211";
+	rename -uid "75208E9B-4015-3DB7-8A79-6F939C291C5B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId212";
+	rename -uid "8F7CDC98-4935-E405-A343-999B141E66C3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId213";
+	rename -uid "2FC3E2B7-44E5-2EA4-0B5B-FDA412D449A5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId214";
+	rename -uid "D9124231-4663-C337-F289-6CAE11CEDA66";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId215";
+	rename -uid "4C7A01AD-485E-859C-22DD-D6AAB00FC95A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId216";
+	rename -uid "D853794D-4444-E53D-6BBC-C9843D8829E4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId217";
+	rename -uid "89532278-4A13-5C1E-5423-53B6FE31DA52";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId218";
+	rename -uid "52EE7B2B-4122-13FC-339D-A685BA65EF26";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId219";
+	rename -uid "7F90DD0E-4139-40DD-2C7D-3B85C752D79C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId220";
+	rename -uid "2EC49FA7-4C29-7E8D-ABC6-C4802ABA4EBE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId221";
+	rename -uid "BA40B9BD-4D8F-DF63-4121-BCA10C59C526";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId222";
+	rename -uid "F276199A-47DD-A75D-51AD-61AE1954C37D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId223";
+	rename -uid "3EA333E9-4AD4-287C-D93F-5A82834D0258";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId224";
+	rename -uid "F8C6939E-4F9E-1DE6-89B8-EEA8D2581741";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId246";
+	rename -uid "AB97301A-4116-EEFD-77F0-E3BA6F885E05";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId247";
+	rename -uid "42F50624-4F8A-8ECD-3F8A-50AB541808B2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId248";
+	rename -uid "AF690FB9-4E49-251F-C000-6A8EFDCF2B8E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId249";
+	rename -uid "EACEDD48-4C76-A333-F9F3-ECB2C863D344";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId250";
+	rename -uid "22AE161D-409E-0602-2F69-0AAC9926D276";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId251";
+	rename -uid "3626E0F3-43D2-3FE4-74A9-0CAEC29C2B2A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId252";
+	rename -uid "90DEF21E-4CAB-9F0F-840F-4CA4DA9A56F4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId264";
+	rename -uid "A54371B2-4235-12DD-A4F3-3D82D11D6B4F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId266";
+	rename -uid "F4110D83-4534-6ECA-6E71-2D9D9DA3618A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId267";
+	rename -uid "2C2B2803-4F82-DB3C-BAC6-018A4566171E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId268";
+	rename -uid "01DBE7B2-4E57-6715-4BCA-5786E91ED755";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId269";
+	rename -uid "E2237056-4F39-EF04-232D-76A4CCB55A2F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId270";
+	rename -uid "901E0A16-4BE3-BA0F-EAF8-009E98CB6C39";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId271";
+	rename -uid "45E8E342-4FBA-ECEE-49FA-B9BA3397EC4D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId272";
+	rename -uid "32971859-4827-DE51-8457-1B89D490C11B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId273";
+	rename -uid "FF344118-44C6-8F19-DDE3-E9A4D8AA8D18";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId274";
+	rename -uid "1FEBF00B-419E-158A-73C9-BAADAE249C9A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId275";
+	rename -uid "0BB26AC7-4D0F-8E42-3BB5-7396B34B3ED8";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId276";
+	rename -uid "00C3A043-4A49-D97E-D255-0C805054C149";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId277";
+	rename -uid "656446A2-45B9-88D7-26BA-7599435B9056";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId278";
+	rename -uid "C4412642-4CB3-54CD-A0F2-2C904D7C8D65";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId279";
+	rename -uid "467EAB05-4635-1228-9A7A-5CA8AF672A60";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId280";
+	rename -uid "3F66BBEF-4D2B-6B6F-D243-C690E46A8C2F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId281";
+	rename -uid "0EEBC390-480A-311C-69EE-568C3E5F1D1F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId282";
+	rename -uid "8BCC8F7F-440D-FC1A-4A7D-8F8B6BC073E7";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId305";
+	rename -uid "A0C6C7F2-46C5-865C-514E-3F976F66A53A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId306";
+	rename -uid "254E48C2-4EED-A55E-A7DB-829E0CD28475";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId307";
+	rename -uid "E99D35D3-4434-31AA-54BE-1D907C8FB3F3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId308";
+	rename -uid "FBAB8F3C-4360-51FE-9E00-C4B4B2046D89";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId309";
+	rename -uid "AD7D8A7D-46BF-428F-4E5B-3797707B1DA8";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId310";
+	rename -uid "63F9895B-44D1-A129-65B2-1489B2EB4066";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo:groupId311";
+	rename -uid "6730DCA5-47A8-FA66-4AE8-0980B7B8EFDA";
+	setAttr ".ihi" 0;
+createNode nodeGraphEditorInfo -n "gazebo1:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "BC03CF59-4904-13B6-3325-9880556A871C";
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -802.38092049719921 ;
+	setAttr ".tgi[0].vh" -type "double2" 604.76188073082676 44.047617297323995 ;
+createNode groupId -n "gazebo1:groupId71";
+	rename -uid "6D42F766-43F5-2A1E-1689-F4A4A92F947C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId75";
+	rename -uid "21F98BF2-4A87-243C-6213-0EB80F974E35";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId79";
+	rename -uid "98A80A33-42DB-0BB3-70D6-FA8CAC4D7358";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId85";
+	rename -uid "FE71CF25-44AB-6B4B-4479-A5BEBC75721A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId86";
+	rename -uid "06D4C617-4FFA-9CB6-C90B-DA89A06E5B5A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId87";
+	rename -uid "5D580E0B-4EA1-4193-C000-008AE8E1F65C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId88";
+	rename -uid "6E10ABC4-4BBE-3281-9982-A0B0C90841D3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId89";
+	rename -uid "229220ED-45B1-E1F2-6E9B-268F7A50903A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId92";
+	rename -uid "1717260B-44CC-8588-B3D9-DF84C8D6B9DF";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId93";
+	rename -uid "85A4C8E9-4503-658E-DB61-3A8B93C04A83";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId94";
+	rename -uid "E8F3D522-47B4-1C4B-6189-8CB3DC69FF63";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId95";
+	rename -uid "2BE6F954-4D07-4679-D354-EFBE4533578F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId96";
+	rename -uid "1DF9B27A-4CB9-CC32-BE13-9DAD0C7A8472";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId98";
+	rename -uid "AD1FD21C-4330-F1A6-5390-6EB1515E397C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId99";
+	rename -uid "C2C2B5DD-4B3C-8B9A-2EEC-55BA9000804E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId100";
+	rename -uid "E868832A-46A8-FB36-51AC-93A7266FCC3E";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId101";
+	rename -uid "568D0373-4899-AA13-AC64-2B80086C58B2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId102";
+	rename -uid "A5306EFC-4EC2-A376-D971-E09632BA7282";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId103";
+	rename -uid "D8215F69-4907-D0DF-AA87-1387ACA22C14";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId104";
+	rename -uid "FD62EF54-488C-F234-0E4A-9595C31A29CE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId105";
+	rename -uid "56FFDE9B-4809-B532-969B-1487D747B5AD";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId106";
+	rename -uid "B83DC97A-4C1D-16BB-9408-72934A3DD926";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId107";
+	rename -uid "DC052B2E-4C7C-3260-15A7-A992E5A88360";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId108";
+	rename -uid "7C2BABF3-4191-0CEB-7F87-6D9557278229";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId109";
+	rename -uid "73A46A6A-41F5-F3E9-7A92-8A87D8496E8D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId110";
+	rename -uid "682E135F-4945-9763-93AA-4A96D048FE0F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId111";
+	rename -uid "75847180-4B27-AB3F-351C-0FA88E4B97EC";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId112";
+	rename -uid "3070F272-4ECD-4152-17AB-549FCE0EE9D3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId113";
+	rename -uid "258D18AC-4C3B-69DC-EE49-4E991B48DA63";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId114";
+	rename -uid "3C35635E-4F92-5552-1DE2-B9AE8308AEB0";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId115";
+	rename -uid "E15C628B-490A-73A8-FA34-95ACA4B56242";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId116";
+	rename -uid "B0F69E79-4ABF-3CC3-9BEB-95A4115B45BB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId117";
+	rename -uid "F46C2A7B-4404-4D6A-4BBA-28A2D0533B98";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId118";
+	rename -uid "DA13F1C4-4C92-6C7D-6B87-AAA0F0CB216A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId119";
+	rename -uid "CB57193C-4824-D06B-FB21-888A4ECD4AB9";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId120";
+	rename -uid "D19BD1B7-4201-48AC-7EF5-79BF9B878281";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId121";
+	rename -uid "6097C2BB-47AA-1C48-419A-00AF919A50E5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId122";
+	rename -uid "85FE8958-456B-C922-8824-A4832AC12DA2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId123";
+	rename -uid "CF1F7F5C-4112-2750-2450-6982D4C43AE7";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId124";
+	rename -uid "7ED60F71-4BA1-AA81-852D-B5A53D9139BA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId125";
+	rename -uid "D470DFE8-47EB-8B19-56FA-F79E68A17669";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId126";
+	rename -uid "D65FFB46-49B6-8E81-B333-86A26407A957";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId127";
+	rename -uid "2E04ED47-434C-0E0A-71B8-EF997A417E18";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId128";
+	rename -uid "6FA49D67-49F7-9AF4-ED9B-64BAB285766D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId129";
+	rename -uid "BB65D353-4E8C-7585-E23F-DABBCE93DD55";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId130";
+	rename -uid "15949B3A-4C57-2194-7447-46BA8E0F4DFC";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId131";
+	rename -uid "F3408361-4B00-ED5E-B40F-469718364EF5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId132";
+	rename -uid "B0B2C34B-49AC-72EA-4897-DA96506741E8";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId133";
+	rename -uid "98874F6E-4FAE-8D6F-0DAB-3A98B6797065";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId134";
+	rename -uid "B38EDB10-4339-604D-5AA9-C4BD688FC700";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId135";
+	rename -uid "FB6DC530-4186-1BA1-D8F6-3FA579FD848F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId136";
+	rename -uid "3A2511AA-40D0-E82A-133C-DE9BDB11C95A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId137";
+	rename -uid "635E0A4A-4691-72E0-7D72-E690562A5395";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId138";
+	rename -uid "4E19B19B-45E2-FD35-D51E-2C93AEBDFD2A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId139";
+	rename -uid "5DEE5092-4EA7-829B-7750-BDACD63DF347";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId140";
+	rename -uid "394F802A-4DC8-0AFC-1B07-91BB6DDFFAE9";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId141";
+	rename -uid "A9607F35-428C-FA8E-6288-A78481AA1CB5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId142";
+	rename -uid "BD2720D4-4AE5-E3E4-EBE8-5EBD85CCB2A1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId143";
+	rename -uid "DB1D7316-4849-5C85-8DB6-2EB1E9FA645B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId144";
+	rename -uid "D0155D53-49FD-8712-ED58-3496710C48D6";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId145";
+	rename -uid "0957E7A1-4397-011B-6514-31B2B0527DFB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId146";
+	rename -uid "16709EA5-4EFB-7148-9322-A19B969C5A7C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId147";
+	rename -uid "7B504500-4704-5279-F92F-94BC32F17C76";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId148";
+	rename -uid "FBB50C34-4E5A-465D-278F-A3B431923180";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId149";
+	rename -uid "590162B1-44C4-19BF-BC8A-63BAE06B5018";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId150";
+	rename -uid "F612A06F-4626-DACF-C4E0-D19837947CF5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId151";
+	rename -uid "7AEA39E7-4DA7-412B-0FEA-8BB1EEA8B764";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId152";
+	rename -uid "0BF628B9-462D-535E-F83A-E2BA99928E87";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId153";
+	rename -uid "489A18E5-4FCB-2D06-A8CD-31B055821C45";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId154";
+	rename -uid "8B32895F-4617-03B9-01ED-6381D40C0A53";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId155";
+	rename -uid "B69A6524-4839-E3DA-94E2-43924E1BC1E2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId156";
+	rename -uid "ED7B20E3-4E85-E118-395A-8BBC6FD55AD2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId157";
+	rename -uid "2235A536-4D01-9CF7-2AC9-A68D6AB5CF90";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId158";
+	rename -uid "463C614A-423B-7EF3-FF99-69B42AA1FE38";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId159";
+	rename -uid "A478196A-4433-5CBE-EE83-ECB35068ED43";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId160";
+	rename -uid "7565D6CA-41CA-FD94-ED87-03AE7AABA999";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId161";
+	rename -uid "27098FD8-468D-63C5-CCDD-B9899C8E8E63";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId162";
+	rename -uid "B56E8EA5-4956-45FA-03ED-08B7F6157A27";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId163";
+	rename -uid "962EA551-4CC8-D6B7-D637-B1AAE31C0B79";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId164";
+	rename -uid "4138DFA7-4075-7128-0B51-B494AB29BEC3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId165";
+	rename -uid "26A586EB-4FAE-0287-42A2-748A54C65702";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId166";
+	rename -uid "F99F3DDD-4A0C-B920-0F8D-7C9F1D8B1DBE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId167";
+	rename -uid "05A16A83-410D-841C-397C-D897AA112215";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId168";
+	rename -uid "8FAE17EF-4B2B-3667-09BC-388943E66AB2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId169";
+	rename -uid "4760D586-48FB-507E-5F96-F5948F922686";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId170";
+	rename -uid "6E0A975F-4AFA-DBEA-8367-D185D7EF61D0";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId171";
+	rename -uid "9CBC4DA8-46CA-FE6D-5BD3-4A810AD15FAA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId172";
+	rename -uid "C1972492-4BE5-30D1-A303-DAAC25541515";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId173";
+	rename -uid "ABB59695-40D4-B0AE-9682-469C0060BFB3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId174";
+	rename -uid "251B8EE8-4D5F-523C-1EB6-50801CCE9DFB";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId175";
+	rename -uid "2ED34DE5-42C3-ACE8-9231-59B61A351336";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId176";
+	rename -uid "4A9921FD-45BA-165E-45C1-02A72F2CC040";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId177";
+	rename -uid "B202F051-457E-F2C9-25D1-1C8B5F71689F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId178";
+	rename -uid "62063BCE-434F-B0BA-1FB9-15B8554B56BF";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId179";
+	rename -uid "42F2D3F0-4547-81A6-D783-8FA97465F028";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId180";
+	rename -uid "B6B46137-4C45-CFBF-0F0B-F98359522B9C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId181";
+	rename -uid "33F089C9-4F7C-233E-FD07-B0AAE90FE6C2";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId182";
+	rename -uid "19D5BA70-4B07-7DA7-B451-B2824E505085";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId183";
+	rename -uid "64B52572-4E78-0C85-D561-34BE2760D047";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId184";
+	rename -uid "2BC90316-42C4-464B-5C07-4C91E6D64774";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId185";
+	rename -uid "87D8DD0C-4806-6D8E-A586-A2B6785F7844";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId186";
+	rename -uid "C3F3EB5A-48F6-31DE-F22D-6DAF380FA146";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId187";
+	rename -uid "0EF1EC39-404B-B168-1561-348CD029A3E8";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId188";
+	rename -uid "3E05CEE4-45CE-849E-0D13-E4A43F2FC961";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId189";
+	rename -uid "A74C7F06-4BF3-251B-9364-38957718C8A8";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId190";
+	rename -uid "056DA302-4204-BCD5-3049-4A969197B449";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId191";
+	rename -uid "32121440-41CD-3795-6CCB-3FA613F10047";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId192";
+	rename -uid "11A209E2-4A62-D042-D936-5380DB43EFCD";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId193";
+	rename -uid "DF5AAF62-4E3E-F3F1-AA97-31BB30109E9B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId194";
+	rename -uid "33CA9F5D-45E6-7E71-0864-118BF1D3CC84";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId195";
+	rename -uid "743E355B-41FF-412C-377F-A49795579C0D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId196";
+	rename -uid "63D64B84-43A6-9390-7844-F4BF6834DC46";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId197";
+	rename -uid "B27F2118-463F-FA11-97E2-8099BDBD5542";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId198";
+	rename -uid "866D1627-4F6B-F614-70FF-3C98E3337A8C";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId199";
+	rename -uid "38DD0FE6-4AB4-2A72-88F4-AB8948A32B0B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId200";
+	rename -uid "2DA27EB8-4013-52B4-1496-AFBF7BA16FAE";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId201";
+	rename -uid "88E37691-4D6C-34DF-41ED-268ED57808C5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId202";
+	rename -uid "FC9E5C70-4B57-FE33-8225-A3BDD9AC04DA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId203";
+	rename -uid "BCE0B59E-4658-9781-1C9F-1D9349F3D498";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId204";
+	rename -uid "C07561B5-4726-895B-0709-0181317E7145";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId205";
+	rename -uid "F6EE5F95-4D57-EABD-D528-2DBC54EA0367";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId206";
+	rename -uid "D2CE15BB-4C95-6EE5-16CD-708451344421";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId207";
+	rename -uid "33124031-4FF1-747C-FB75-CC816884E5FF";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId208";
+	rename -uid "AE51DD04-4C49-7B33-7C66-67871327F113";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId209";
+	rename -uid "EBECC26A-4214-CD9E-C10C-B6BA00333825";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId210";
+	rename -uid "9A00BE45-4F82-86B7-2BA6-8BA2260F5C4A";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId211";
+	rename -uid "3895E526-4D7B-4FB5-E4B9-EB900A9C54ED";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId212";
+	rename -uid "D97F57F5-4D1E-8E42-21D5-169195D5C964";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId213";
+	rename -uid "A382B901-4F20-1971-BFFD-4995CBB706D3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId214";
+	rename -uid "1BE8050A-4BDB-1D47-C944-3C9F01C7E364";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId215";
+	rename -uid "2A5C44A2-496B-1927-D837-3DA9C9A58521";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId216";
+	rename -uid "395779B6-4CB6-FD53-310D-39B06EB28A54";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId217";
+	rename -uid "A135900F-462C-AB68-1B2F-EEB1D11852D7";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId218";
+	rename -uid "AAC15070-4C58-973A-4C62-4E86E0604D8D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId219";
+	rename -uid "9B89548D-42B6-6AF3-9CB9-CAA9B64E9BE3";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId220";
+	rename -uid "9C15AEE3-43EF-110B-2C7B-E7AAA3A58DF0";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId221";
+	rename -uid "81244988-48C6-69D9-E4DC-B6A00CD1A864";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId222";
+	rename -uid "7539825E-4165-0ACE-94D7-E6BB96FD54D4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId223";
+	rename -uid "35342243-4273-A000-A4D8-1485C2EADAC5";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId224";
+	rename -uid "498FEF05-49FA-8D60-AC40-5B9F1CCC6C04";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId246";
+	rename -uid "EF5090F6-47B1-EA5B-7206-C7ADC1ACEE85";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId247";
+	rename -uid "F6DAFF00-4318-54C2-9235-3588E4E8940B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId248";
+	rename -uid "3F2E45D2-4F09-6B53-BCCD-F397C47D715D";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId249";
+	rename -uid "E981E10B-4A3C-D7E6-B0E7-D2846879E8E9";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId250";
+	rename -uid "FBCD96F9-4118-12F2-D05F-E0995C0E6F3B";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId251";
+	rename -uid "6AE47AE6-4376-62B3-E6D4-168D69473468";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId252";
+	rename -uid "D49FC37A-4C45-1C68-D6E3-BE89109E1BDC";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId264";
+	rename -uid "DDB08134-4DF4-7D59-496F-A6B37840DAA9";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId267";
+	rename -uid "504D2C72-4805-EE30-234A-F99996CC6B94";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId268";
+	rename -uid "27EE722F-4C83-C576-870E-5AAE3FADDFB4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId269";
+	rename -uid "B4803B31-4C5E-0189-70E9-4DAE1F4D5582";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId270";
+	rename -uid "0621D8C8-47E2-1783-F05A-BEB4FF57E441";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId271";
+	rename -uid "F66ACBB5-400D-0DC2-C091-23A86005AFCA";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId272";
+	rename -uid "8350033E-4298-2C2B-F4D9-50A210FC358F";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId273";
+	rename -uid "4180E9D2-466D-AFC7-1252-5E92766B2367";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId274";
+	rename -uid "4B1D0552-4BB1-670D-6DA9-DFB304E46FDF";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId275";
+	rename -uid "969E5D17-4441-54A1-EE20-A5962172D971";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId276";
+	rename -uid "C5D0D158-42CD-107E-82C7-DFB089C07AD1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId277";
+	rename -uid "823A6BDE-439E-BB99-25B5-CAA8DE7412C1";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId278";
+	rename -uid "C583A843-44E1-A739-5D29-22B71253E3F0";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId279";
+	rename -uid "82EB6A53-41E6-4963-2162-B0833527F2AF";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId280";
+	rename -uid "3A0CE6EE-412C-EFA8-934E-BDBF85BA26D4";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId281";
+	rename -uid "B6FA217D-46C3-A6B7-6A0C-649D0BE54C98";
+	setAttr ".ihi" 0;
+createNode groupId -n "gazebo1:groupId257";
+	rename -uid "4AD6E42A-4FAA-D032-2B05-BFADBA80E729";
+	setAttr ".ihi" 0;
+createNode polyBevel3 -n "polyBevel3";
+	rename -uid "8EE11334-4F22-29CC-8FE3-C7A620FA5496";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3.2680692024440781 0 4.4046603374316664 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.01;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode groupId -n "gazebo1:groupId312";
+	rename -uid "870D2247-43D2-FC45-9454-CAA7ACAE811F";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts1";
+	rename -uid "0F93C9F4-4A81-D974-C3A4-409D49E59B9E";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:8]";
+createNode polyBevel3 -n "polyBevel4";
+	rename -uid "4BF50B23-4033-87FB-5661-A3BE32B1952B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3.2680692024440781 0 4.4046603374316664 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.05;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode groupId -n "gazebo1:groupId313";
+	rename -uid "B64736CB-4051-200D-D331-4B8703717FB9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts2";
+	rename -uid "1FA853D2-4759-1573-90B7-27A1BAC9D4FA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId314";
+	rename -uid "0BE06E29-41C7-B7CD-296B-EDBE44D1AFBE";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts3";
+	rename -uid "B6899F65-40ED-FBE3-22AB-60980035FF6E";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId315";
+	rename -uid "6AB325D1-4306-1488-23C8-D5A2F07CC43C";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts4";
+	rename -uid "F2AA277A-4D3E-9901-E2D4-B0973DD9A91F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId316";
+	rename -uid "658BEA6B-41C1-55B0-E7C7-D8BD8E5F2445";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts5";
+	rename -uid "3648BA7F-4BD0-5AA5-E438-E590AE455EDC";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId317";
+	rename -uid "26625D49-4C16-640A-87FD-6C9619822BA1";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts6";
+	rename -uid "402E3C4D-4969-AE89-3482-AC9AEB260C80";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId318";
+	rename -uid "DC8AA75D-4306-A82A-9B56-DB8B2395F1F4";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts7";
+	rename -uid "E1EAF01F-463C-755C-63C2-2DA1AB63D8EA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId319";
+	rename -uid "82A3C86F-404E-7BBE-B3C2-44A7924F7844";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts8";
+	rename -uid "6588379B-4002-BF1D-350D-79BCC4C0B059";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId320";
+	rename -uid "D57580C1-4165-39C9-6DD8-41A81A690416";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts9";
+	rename -uid "128D5B69-41E1-10E2-2D98-A5B115C2FC9C";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode polyBevel3 -n "polyBevel5";
+	rename -uid "7880C42E-4780-CDB1-E2BE-2EBE8DEAAF7F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 0.70710678118654791 0 0.70710678118654813 0 -9.8381555554846944e-17 -1.1361033258723749 9.8381555554846895e-17 0
+		 -0.70710678118654813 1.2246467991473539e-16 0.70710678118654791 0 -3.2680692024440781 8.2272497031495107 4.4046603374316664 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.001;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode groupId -n "gazebo1:groupId321";
+	rename -uid "03A637D6-470C-50F0-9331-2D84BA93C434";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts10";
+	rename -uid "71B28AF3-4039-4C73-F093-1DA400ED97DD";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId322";
+	rename -uid "6A686AAC-4029-1D2C-6DF5-8EA558AFFF41";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts11";
+	rename -uid "52199852-48F9-E131-964C-1DB23E54BE57";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId323";
+	rename -uid "0CE30E62-4D7F-1417-172E-3799C2EBB03C";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts12";
+	rename -uid "04B5B6EA-45D4-8124-DF46-54B624638A1E";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId324";
+	rename -uid "C31DD404-42C7-B375-5DC3-30A4046AABF5";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts13";
+	rename -uid "3D6471F2-4408-65C4-4A09-DEB91778D8BD";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId325";
+	rename -uid "6E7E1CF2-4F7B-E2B7-D964-168D4C5A756F";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts14";
+	rename -uid "4203F7C2-4672-3B28-6A9E-179445E6D8E8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId326";
+	rename -uid "50AE68B5-45AE-7ED1-40A2-3788640C3971";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts15";
+	rename -uid "9FD852E0-475C-5D4D-57E0-DCB86A79F5C9";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId327";
+	rename -uid "14A8B436-479C-55AE-1309-0B9F68257653";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts16";
+	rename -uid "F0144A3B-4DA6-AD30-F72E-F1BCBF860615";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode groupId -n "gazebo1:groupId328";
+	rename -uid "54A4265C-417B-9B4F-0C9F-698D619A2293";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts17";
+	rename -uid "BCF2C96E-476C-4CF2-B4CF-8BB4F76A8A35";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:74]";
+createNode polyBevel3 -n "polyBevel6";
+	rename -uid "7E272728-466E-CB38-B343-5A99AB088CBE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 0.70710678118654802 0 0.70710678118654791 0 0 1 0 0
+		 -0.70710678118654791 0 0.70710678118654802 0 -3.2680692024440781 0 4.4046603374316664 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.05;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode groupId -n "gazebo1:groupId329";
+	rename -uid "DC9C3CF0-48CB-AED1-4F5F-C3B2A58E9507";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts18";
+	rename -uid "76E281DA-4FAC-3695-E1BB-4F8A5421404A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId330";
+	rename -uid "B6D49D24-4805-F903-3FA8-E39E971A7EA2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts19";
+	rename -uid "F849ECE6-4404-9269-A75B-F39F7C22A5AF";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId331";
+	rename -uid "40D3906F-4DB4-D181-2A8D-10B5557E1678";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts20";
+	rename -uid "4FDC00FC-4685-A555-323C-739EC6CBBF97";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId332";
+	rename -uid "F77609E7-4C62-B9F1-3E69-2A8E4DB45D94";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts21";
+	rename -uid "59C7B51A-4B9A-8930-5955-29A5145AEA05";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId333";
+	rename -uid "1A1AF200-4D77-AB92-D8CA-97BDB9D42A35";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts22";
+	rename -uid "C21096D7-4578-CDB1-8AE1-FBAD9459503A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId334";
+	rename -uid "D46F6725-4382-158D-A3BA-ADAA429D805E";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts23";
+	rename -uid "B5B0D345-490C-7B92-99CD-339750FCB9A0";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId335";
+	rename -uid "5902157C-461B-5881-7288-268E4109B39E";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts24";
+	rename -uid "2A31369C-4061-2E34-948E-368E31A4B1B8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode groupId -n "gazebo1:groupId336";
+	rename -uid "98C00153-4FD1-AE6D-06E3-D8AC632391AB";
+	setAttr ".ihi" 0;
+createNode groupParts -n "gazebo1:groupParts25";
+	rename -uid "6E660EEC-41B5-11DD-F91A-DEBCB1C717AD";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:55]";
+createNode polyCube -n "polyCube3";
+	rename -uid "CEE49980-4FDB-D6C8-35F8-32B2F24EE5DA";
+	setAttr ".cuv" 4;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1175,9 +3636,9 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 25 ".dsm";
+	setAttr -s 39 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 28 ".gn";
+	setAttr -s 389 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
@@ -1199,66 +3660,126 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "polyCube1.out" "pCubeShape1.i";
 connectAttr "deleteComponent1.og" "pConeShape1.i";
 connectAttr "polyBevel2.out" "baseShape.i";
 connectAttr "groupId1.id" "pConeShape6.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pConeShape6.iog.og[0].gco";
 connectAttr "groupParts1.og" "pConeShape6.i";
 connectAttr "groupId2.id" "pConeShape6.ciog.cog[0].cgid";
-connectAttr "groupId3.id" "|pCylinder2|transform8|pCylinderShape2.iog.og[0].gid"
+connectAttr "groupId3.id" "pCylinderShape2.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinderShape2.iog.og[0].gco";
+connectAttr "groupParts9.og" "pCylinderShape2.i";
+connectAttr "groupId4.id" "pCylinderShape2.ciog.cog[0].cgid";
+connectAttr "gazebo1:groupId257.id" "gazebo1:polySurfaceShape2.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "gazebo1:polySurfaceShape2.iog.og[0].gco"
 		;
-connectAttr ":initialShadingGroup.mwc" "|pCylinder2|transform8|pCylinderShape2.iog.og[0].gco"
+connectAttr "gazebo1:groupId312.id" "gazebo1:polySurfaceShape4.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "gazebo1:polySurfaceShape4.iog.og[0].gco"
 		;
-connectAttr "groupId5.id" "|group1|pCylinder3|transform7|pCylinderShape2.iog.og[0].gid"
+connectAttr "polyBevel3.out" "gazebo1:polySurfaceShape4.i";
+connectAttr "gazebo1:groupId313.id" "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder3|transform7|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId7.id" "|group1|pCylinder4|transform6|pCylinderShape2.iog.og[0].gid"
+connectAttr "gazebo1:groupId314.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface17|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder4|transform6|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface17|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId9.id" "|group1|pCylinder5|transform5|pCylinderShape2.iog.og[0].gid"
+connectAttr "gazebo1:groupId315.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface19|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder5|transform5|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface19|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId11.id" "|group1|pCylinder6|transform4|pCylinderShape2.iog.og[0].gid"
+connectAttr "gazebo1:groupId316.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface21|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder6|transform4|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface21|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId13.id" "|group1|pCylinder7|transform3|pCylinderShape2.iog.og[0].gid"
+connectAttr "gazebo1:groupId317.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface23|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder7|transform3|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface23|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId15.id" "|group1|pCylinder8|transform2|pCylinderShape2.iog.og[0].gid"
+connectAttr "gazebo1:groupId318.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface25|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder8|transform2|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface25|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId17.id" "|group1|pCylinder9|transform1|pCylinderShape2.iog.og[0].gid"
+connectAttr "gazebo1:groupId319.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface27|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group1|pCylinder9|transform1|pCylinderShape2.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface27|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupParts9.og" "|pCylinder2|transform8|pCylinderShape2.i";
-connectAttr "groupId4.id" "|pCylinder2|transform8|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr "gazebo1:groupId320.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface29|gazebo1:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr "groupId6.id" "|group1|pCylinder3|transform7|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface29|gazebo1:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "groupId8.id" "|group1|pCylinder4|transform6|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr "polyBevel4.out" "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10.i"
 		;
-connectAttr "groupId10.id" "|group1|pCylinder5|transform5|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr "gazebo1:groupId329.id" "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11.iog.og[0].gid"
 		;
-connectAttr "groupId12.id" "|group1|pCylinder6|transform4|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11.iog.og[0].gco"
 		;
-connectAttr "groupId14.id" "|group1|pCylinder7|transform3|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr "gazebo1:groupId330.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface16|gazebo1:polySurfaceShape11.iog.og[0].gid"
 		;
-connectAttr "groupId16.id" "|group1|pCylinder8|transform2|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface16|gazebo1:polySurfaceShape11.iog.og[0].gco"
 		;
-connectAttr "groupId18.id" "|group1|pCylinder9|transform1|pCylinderShape2.ciog.cog[0].cgid"
+connectAttr "gazebo1:groupId331.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface18|gazebo1:polySurfaceShape11.iog.og[0].gid"
 		;
-connectAttr "groupParts10.og" "pCone7Shape.i";
-connectAttr "groupId19.id" "pCone7Shape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "pCone7Shape.iog.og[0].gco";
-connectAttr "groupId20.id" "pCone7Shape.ciog.cog[0].cgid";
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface18|gazebo1:polySurfaceShape11.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId332.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface20|gazebo1:polySurfaceShape11.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface20|gazebo1:polySurfaceShape11.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId333.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface22|gazebo1:polySurfaceShape11.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface22|gazebo1:polySurfaceShape11.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId334.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface24|gazebo1:polySurfaceShape11.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface24|gazebo1:polySurfaceShape11.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId335.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface26|gazebo1:polySurfaceShape11.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface26|gazebo1:polySurfaceShape11.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId336.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface28|gazebo1:polySurfaceShape11.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface28|gazebo1:polySurfaceShape11.iog.og[0].gco"
+		;
+connectAttr "polyBevel6.out" "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11.i"
+		;
+connectAttr "gazebo1:groupId321.id" "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId322.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface15|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface15|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId323.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface16|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface16|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId324.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface17|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface17|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId325.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface18|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface18|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId326.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface19|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface19|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId327.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface20|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface20|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "gazebo1:groupId328.id" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface21|gazebo1:pasted__polySurfaceShape14.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface21|gazebo1:pasted__polySurfaceShape14.iog.og[0].gco"
+		;
+connectAttr "polyBevel5.out" "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14.i"
+		;
+connectAttr "polyCube3.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1286,31 +3807,6 @@ connectAttr "polyTweak6.out" "polySplit4.ip";
 connectAttr "polySplit3.out" "polyTweak6.ip";
 connectAttr "polySplit4.out" "polySplit5.ip";
 connectAttr "polySplit5.out" "polySplit6.ip";
-connectAttr "pConeShape6.o" "polyUnite1.ip[0]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[1]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[2]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[3]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[4]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[5]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[6]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[7]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.o" "polyUnite1.ip[8]";
-connectAttr "pConeShape6.wm" "polyUnite1.im[0]";
-connectAttr "|pCylinder2|transform8|pCylinderShape2.wm" "polyUnite1.im[1]";
-connectAttr "|group1|pCylinder3|transform7|pCylinderShape2.wm" "polyUnite1.im[2]"
-		;
-connectAttr "|group1|pCylinder4|transform6|pCylinderShape2.wm" "polyUnite1.im[3]"
-		;
-connectAttr "|group1|pCylinder5|transform5|pCylinderShape2.wm" "polyUnite1.im[4]"
-		;
-connectAttr "|group1|pCylinder6|transform4|pCylinderShape2.wm" "polyUnite1.im[5]"
-		;
-connectAttr "|group1|pCylinder7|transform3|pCylinderShape2.wm" "polyUnite1.im[6]"
-		;
-connectAttr "|group1|pCylinder8|transform2|pCylinderShape2.wm" "polyUnite1.im[7]"
-		;
-connectAttr "|group1|pCylinder9|transform1|pCylinderShape2.wm" "polyUnite1.im[8]"
-		;
 connectAttr "polyCone3.out" "groupParts1.ig";
 connectAttr "groupId1.id" "groupParts1.gi";
 connectAttr "polySplit6.out" "groupParts2.ig";
@@ -1329,50 +3825,133 @@ connectAttr "groupParts7.og" "groupParts8.ig";
 connectAttr "groupId15.id" "groupParts8.gi";
 connectAttr "groupParts8.og" "groupParts9.ig";
 connectAttr "groupId17.id" "groupParts9.gi";
-connectAttr "polyUnite1.out" "groupParts10.ig";
-connectAttr "groupId19.id" "groupParts10.gi";
+connectAttr "gazebo1:groupParts1.og" "polyBevel3.ip";
+connectAttr "gazebo1:polySurfaceShape4.wm" "polyBevel3.mp";
+connectAttr "gazebo1:polySurfaceShape12.o" "gazebo1:groupParts1.ig";
+connectAttr "gazebo1:groupId312.id" "gazebo1:groupParts1.gi";
+connectAttr "gazebo1:groupParts9.og" "polyBevel4.ip";
+connectAttr "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10.wm" "polyBevel4.mp"
+		;
+connectAttr "gazebo1:polySurfaceShape13.o" "gazebo1:groupParts2.ig";
+connectAttr "gazebo1:groupId313.id" "gazebo1:groupParts2.gi";
+connectAttr "gazebo1:groupParts2.og" "gazebo1:groupParts3.ig";
+connectAttr "gazebo1:groupId314.id" "gazebo1:groupParts3.gi";
+connectAttr "gazebo1:groupParts3.og" "gazebo1:groupParts4.ig";
+connectAttr "gazebo1:groupId315.id" "gazebo1:groupParts4.gi";
+connectAttr "gazebo1:groupParts4.og" "gazebo1:groupParts5.ig";
+connectAttr "gazebo1:groupId316.id" "gazebo1:groupParts5.gi";
+connectAttr "gazebo1:groupParts5.og" "gazebo1:groupParts6.ig";
+connectAttr "gazebo1:groupId317.id" "gazebo1:groupParts6.gi";
+connectAttr "gazebo1:groupParts6.og" "gazebo1:groupParts7.ig";
+connectAttr "gazebo1:groupId318.id" "gazebo1:groupParts7.gi";
+connectAttr "gazebo1:groupParts7.og" "gazebo1:groupParts8.ig";
+connectAttr "gazebo1:groupId319.id" "gazebo1:groupParts8.gi";
+connectAttr "gazebo1:groupParts8.og" "gazebo1:groupParts9.ig";
+connectAttr "gazebo1:groupId320.id" "gazebo1:groupParts9.gi";
+connectAttr "gazebo1:groupParts17.og" "polyBevel5.ip";
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface21|gazebo1:pasted__polySurfaceShape14.wm" "polyBevel5.mp"
+		;
+connectAttr "gazebo1:polySurfaceShape14.o" "gazebo1:groupParts10.ig";
+connectAttr "gazebo1:groupId321.id" "gazebo1:groupParts10.gi";
+connectAttr "gazebo1:groupParts10.og" "gazebo1:groupParts11.ig";
+connectAttr "gazebo1:groupId322.id" "gazebo1:groupParts11.gi";
+connectAttr "gazebo1:groupParts11.og" "gazebo1:groupParts12.ig";
+connectAttr "gazebo1:groupId323.id" "gazebo1:groupParts12.gi";
+connectAttr "gazebo1:groupParts12.og" "gazebo1:groupParts13.ig";
+connectAttr "gazebo1:groupId324.id" "gazebo1:groupParts13.gi";
+connectAttr "gazebo1:groupParts13.og" "gazebo1:groupParts14.ig";
+connectAttr "gazebo1:groupId325.id" "gazebo1:groupParts14.gi";
+connectAttr "gazebo1:groupParts14.og" "gazebo1:groupParts15.ig";
+connectAttr "gazebo1:groupId326.id" "gazebo1:groupParts15.gi";
+connectAttr "gazebo1:groupParts15.og" "gazebo1:groupParts16.ig";
+connectAttr "gazebo1:groupId327.id" "gazebo1:groupParts16.gi";
+connectAttr "gazebo1:groupParts16.og" "gazebo1:groupParts17.ig";
+connectAttr "gazebo1:groupId328.id" "gazebo1:groupParts17.gi";
+connectAttr "gazebo1:groupParts25.og" "polyBevel6.ip";
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface28|gazebo1:polySurfaceShape11.wm" "polyBevel6.mp"
+		;
+connectAttr "gazebo1:polySurfaceShape15.o" "gazebo1:groupParts18.ig";
+connectAttr "gazebo1:groupId329.id" "gazebo1:groupParts18.gi";
+connectAttr "gazebo1:groupParts18.og" "gazebo1:groupParts19.ig";
+connectAttr "gazebo1:groupId330.id" "gazebo1:groupParts19.gi";
+connectAttr "gazebo1:groupParts19.og" "gazebo1:groupParts20.ig";
+connectAttr "gazebo1:groupId331.id" "gazebo1:groupParts20.gi";
+connectAttr "gazebo1:groupParts20.og" "gazebo1:groupParts21.ig";
+connectAttr "gazebo1:groupId332.id" "gazebo1:groupParts21.gi";
+connectAttr "gazebo1:groupParts21.og" "gazebo1:groupParts22.ig";
+connectAttr "gazebo1:groupId333.id" "gazebo1:groupParts22.gi";
+connectAttr "gazebo1:groupParts22.og" "gazebo1:groupParts23.ig";
+connectAttr "gazebo1:groupId334.id" "gazebo1:groupParts23.gi";
+connectAttr "gazebo1:groupParts23.og" "gazebo1:groupParts24.ig";
+connectAttr "gazebo1:groupId335.id" "gazebo1:groupParts24.gi";
+connectAttr "gazebo1:groupParts24.og" "gazebo1:groupParts25.ig";
+connectAttr "gazebo1:groupId336.id" "gazebo1:groupParts25.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pConeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pConeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pConeShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "baseShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pConeShape6.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pConeShape6.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "|pCylinder2|transform8|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "gazebo1:polySurfaceShape2.iog.og[0]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "gazebo1:polySurfaceShape4.iog.og[0]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface14|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|pCylinder2|transform8|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface17|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder3|transform7|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface19|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder3|transform7|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface21|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder4|transform6|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface23|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder4|transform6|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface25|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder5|transform5|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface27|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder5|transform5|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface29|gazebo1:polySurfaceShape10.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder6|transform4|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:pasted__polySurface4|gazebo1:pasted__polySurface14|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder6|transform4|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface15|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder7|transform3|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface16|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder7|transform3|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface17|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder8|transform2|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface18|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder8|transform2|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface19|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder9|transform1|pCylinderShape2.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface20|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group1|pCylinder9|transform1|pCylinderShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:pasted__polySurface21|gazebo1:pasted__polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "pCone7Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCone7Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "|gazebo1:gazebo|gazebo1:polySurface4|gazebo1:polySurface15|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface16|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface18|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface20|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface22|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface24|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface26|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|gazebo1:gazebo|gazebo1:group1|gazebo1:polySurface28|gazebo1:polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
@@ -1401,4 +3980,365 @@ connectAttr "groupId26.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId27.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId28.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId29.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId71.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId75.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId79.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId85.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId86.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId87.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId88.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId89.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId92.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId93.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId94.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId95.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId96.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId98.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId99.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId100.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId101.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId102.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId103.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId104.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId105.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId106.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId107.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId108.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId109.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId110.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId111.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId112.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId113.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId114.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId115.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId116.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId117.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId118.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId119.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId120.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId121.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId122.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId123.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId124.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId125.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId126.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId127.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId128.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId129.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId130.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId131.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId132.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId133.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId134.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId135.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId136.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId137.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId138.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId139.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId140.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId141.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId142.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId143.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId144.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId145.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId146.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId147.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId148.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId149.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId150.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId151.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId152.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId153.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId154.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId155.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId156.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId157.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId158.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId159.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId160.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId161.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId162.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId163.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId164.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId165.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId166.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId167.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId168.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId169.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId170.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId171.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId172.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId173.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId174.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId175.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId176.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId177.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId178.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId179.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId180.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId181.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId182.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId183.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId184.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId185.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId186.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId187.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId188.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId189.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId190.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId191.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId192.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId193.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId194.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId195.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId196.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId197.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId198.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId199.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId200.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId201.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId202.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId203.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId204.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId205.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId206.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId207.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId208.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId209.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId210.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId211.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId212.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId213.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId214.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId215.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId216.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId217.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId218.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId219.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId220.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId221.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId222.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId223.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId224.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId246.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId247.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId248.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId249.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId250.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId251.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId252.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId264.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId266.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId267.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId268.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId269.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId270.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId271.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId272.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId273.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId274.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId275.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId276.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId277.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId278.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId279.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId280.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId281.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId282.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId305.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId306.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId307.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId308.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId309.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId310.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo:groupId311.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId71.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId75.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId79.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId85.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId86.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId87.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId88.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId89.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId92.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId93.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId94.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId95.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId96.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId98.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId99.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId100.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId101.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId102.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId103.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId104.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId105.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId106.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId107.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId108.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId109.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId110.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId111.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId112.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId113.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId114.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId115.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId116.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId117.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId118.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId119.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId120.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId121.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId122.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId123.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId124.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId125.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId126.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId127.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId128.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId129.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId130.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId131.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId132.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId133.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId134.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId135.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId136.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId137.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId138.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId139.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId140.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId141.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId142.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId143.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId144.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId145.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId146.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId147.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId148.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId149.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId150.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId151.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId152.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId153.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId154.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId155.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId156.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId157.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId158.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId159.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId160.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId161.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId162.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId163.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId164.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId165.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId166.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId167.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId168.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId169.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId170.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId171.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId172.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId173.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId174.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId175.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId176.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId177.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId178.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId179.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId180.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId181.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId182.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId183.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId184.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId185.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId186.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId187.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId188.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId189.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId190.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId191.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId192.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId193.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId194.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId195.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId196.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId197.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId198.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId199.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId200.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId201.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId202.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId203.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId204.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId205.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId206.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId207.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId208.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId209.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId210.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId211.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId212.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId213.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId214.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId215.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId216.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId217.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId218.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId219.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId220.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId221.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId222.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId223.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId224.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId246.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId247.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId248.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId249.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId250.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId251.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId252.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId257.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId264.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId267.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId268.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId269.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId270.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId271.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId272.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId273.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId274.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId275.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId276.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId277.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId278.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId279.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId280.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId281.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId312.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId313.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId314.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId315.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId316.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId317.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId318.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId319.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId320.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId321.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId322.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId323.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId324.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId325.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId326.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId327.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId328.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId329.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId330.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId331.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId332.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId333.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId334.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId335.msg" ":initialShadingGroup.gn" -na;
+connectAttr "gazebo1:groupId336.msg" ":initialShadingGroup.gn" -na;
 // End of scene.ma
