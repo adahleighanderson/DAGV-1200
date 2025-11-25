@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: gazebo.ma
-//Last modified: Tue, Nov 25, 2025 10:30:34 AM
+//Last modified: Tue, Nov 25, 2025 10:30:59 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,24 +13,23 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "F64EE806-4F67-FC4D-2E64-E598DA159089";
+fileInfo "UUID" "97CFB808-4F11-23FA-EDF9-70A486819E25";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "36A31958-4975-32E1-ADB0-C9BBF47B260F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.4959354738720796 6.380498380966535 -11.454192355247168 ;
-	setAttr ".r" -type "double3" 162.96021841998407 -36.915218721264985 179.99999999999997 ;
-	setAttr ".rp" -type "double3" -7.7715611723760958e-16 0 0 ;
-	setAttr ".rpt" -type "double3" 6.5630730681841808e-15 9.1121572044954689e-15 4.8541107465620987e-14 ;
+	setAttr ".t" -type "double3" -11.126215490523395 4.5242896676063449 -11.126215728942022 ;
+	setAttr ".r" -type "double3" 0 224.99999999999994 0 ;
+	setAttr ".rpt" -type "double3" 5.0745637678151056e-15 9.0579082163790251e-15 4.8943152256318305e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1AF73E10-4B41-646B-D3A1-1092F343A212";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.545198856295578;
+	setAttr ".coi" 15.734844338821613;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.29165733480471356 2.7043083152168736 -1.8643009356616318 ;
+	setAttr ".tp" -type "double3" -3.5762787575777111e-07 4.5242896676063538 -5.9604644597754941e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "E382A359-4DCB-E99E-7FCD-DB8118654B99";
