@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene.ma
-//Last modified: Tue, Dec 09, 2025 03:39:50 PM
+//Last modified: Tue, Dec 09, 2025 03:40:11 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "materialxStack" -dataType "MxDocumentStackData" "LookdevXMaya" "1.6.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "BD56D230-4974-67AA-EC16-4094BF751D88";
+fileInfo "UUID" "65DCCC88-4CD7-99DD-042F-D298B2E81F36";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "36A31958-4975-32E1-ADB0-C9BBF47B260F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 19.160792748050564 23.073687105149929 18.055683319514813 ;
+	setAttr ".t" -type "double3" 14.594610752535184 27.573059425399727 24.478171085649151 ;
 	setAttr ".r" -type "double3" -40.975447036064956 32.912917140483557 -3.4097773976036549e-14 ;
 	setAttr ".rp" -type "double3" -5.3290705182007514e-15 2.4424906541753444e-15 0 ;
 	setAttr ".rpt" -type "double3" 2.4305130200959397e-15 1.6198967926887643e-15 3.6720150751405737e-14 ;
@@ -27,7 +27,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1AF73E10-4B41-646B-D3A1-1092F343A212";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 22.246422020897874;
+	setAttr ".coi" 27.394269054022303;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -15797,6 +15797,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+select -ne :modelPanel2ViewSelectedSet;
+	setAttr ".ihi" 0;
 connectAttr "deleteComponent1.og" "|tree|pCone1|pConeShape1.i";
 connectAttr "polyBridgeEdge13.out" "baseShape.i";
 connectAttr "groupId37.id" "baseShape.iog.og[0].gid";
